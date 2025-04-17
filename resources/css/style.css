@@ -4,22 +4,16 @@
     --color-accent: rgb(253, 225, 45);
 }
 
-.primario {
-    --color-primary: rgb(235, 242, 250);
-}
-
-.secondario {
-    --color-secondary: rgb(30, 16, 20);
-}
-
-.accento {
-    --color-accent: rgb(253, 225, 45);
-}
-
 body {
     background-color: var(--color-primary);
 }
 
 * {
     font-family: 'Open Sans', sans-serif;
+}
+
+/* stile navbar */
+
+.bg-navbar {
+    background: var(--color-secondary);
 }

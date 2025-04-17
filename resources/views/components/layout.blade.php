@@ -13,6 +13,7 @@
 @vite(['resources/css/app.css', 'resources/js/app.js'])
 
 <body>
+    <x-navbar/>
     {{ $slot }}
 </body>
 </html>
