@@ -1,1 +1,16 @@
-Benvenuti nel file readme del Gruppo 2!
+# Progetto finale PRESTO
+## Studenti: Danilo Amoruso, Gianfranco Cito, Fabrizio Pavone, Anna Vincenzi.
+
+## FRONT-END
+**Palette colori utilizzata:**
+- rgb(235, 242, 250) *background*
+- rgb(30, 16, 20) *text*
+- rgb(253, 225, 45) *accent*
+
+**Font utilizzato:**
+- Open Sans (dalla libreria *Google Fonts*)
+
+## Funzionalità implementate
+- Autenticazione con Laravel Fortify
+- 
+
