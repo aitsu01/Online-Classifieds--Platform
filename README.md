@@ -11,6 +11,7 @@
 - Open Sans (dalla libreria *Google Fonts*)
 
 ## Funzionalità implementate
+- navbar e footer con Blade Components
 - Autenticazione con Laravel Fortify
 - 
 
