@@ -24,7 +24,7 @@
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="#">Crea articolo</a></li>
-              <li><a class="dropdown-item dropdown" href="#">Categorie</a></li>
+              <li><a class="dropdown-item" href="#">Categorie</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
               <form action="{{route('logout')}}" method="POST" id="logout">@csrf</form></li>
