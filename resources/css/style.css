@@ -17,3 +17,25 @@ body {
 .bg-navbar {
     background: var(--color-secondary);
 }
+
+/* stile footer */
+.footerLink{
+    color: var(--color-primary);
+    text-decoration: none;
+    padding: 0.5vw;
+}
+
+.footerItem{
+    color: var(--color-primary);
+    text-decoration: none;
+    list-style: none;
+    font-size: 1.2vw;
+    width: fit-content;
+    height: fit-content;
+}
+
+.footerTitle{
+    color: var(--color-accent);
+    font-size: 1.6vw;
+
+}
