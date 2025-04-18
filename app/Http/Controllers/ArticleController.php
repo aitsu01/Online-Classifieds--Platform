@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Article;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\Middleware;
@@ -19,5 +20,15 @@ class ArticleController extends Controller implements HasMiddleware
         $categories = Category::all();
         return view('article.create', compact('categories'));
     }
+
+    public function index() {
+        $articles=Article::orderBy('created_at', 'desc')->paginate('6');
+        return view('article.index', compact('articles'));
+    }
+
+    public function show(Article $article) {
+        return view('article.show', compact('article'));
+    }
+
     
 }

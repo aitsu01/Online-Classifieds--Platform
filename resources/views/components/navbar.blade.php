@@ -9,6 +9,9 @@
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
           </li>
+          <li>
+            <a class="nav-link" href="{{ route('article.index') }}">Articoli</a>
+          </li>
           @guest
           <li class="nav-item">
             <a class="nav-link" href="{{ route('login') }}">Login</a>
