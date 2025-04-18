@@ -13,10 +13,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Iceberg&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-<<<<<<< HEAD
-=======
-
->>>>>>> c04d65419004a780a97323fb0667074365d956d0
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
