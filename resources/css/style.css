@@ -15,7 +15,8 @@ body {
 /* stile navbar */
 
 .bg-navbar {
-    background: var(--color-secondary);
+    background-color: var(--color-secondary);
+    
 }
 
 /* stile footer */
@@ -25,11 +26,15 @@ body {
     padding: 0.5vw;
 }
 
+.footerLink:hover{
+    color: var(--color-accent);
+}
+
 .footerItem{
     color: var(--color-primary);
     text-decoration: none;
     list-style: none;
-    font-size: 1.2vw;
+    font-size: 1vw;
     width: fit-content;
     height: fit-content;
 }
@@ -37,5 +42,6 @@ body {
 .footerTitle{
     color: var(--color-accent);
     font-size: 1.6vw;
-
+    padding-bottom: 0.2vw;
+    margin: 0;
 }

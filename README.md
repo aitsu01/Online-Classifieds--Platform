@@ -11,7 +11,9 @@
 - Open Sans (dalla libreria *Google Fonts*)
 
 ## Funzionalità implementate
-- navbar e footer con Blade Components
-- Autenticazione con Laravel Fortify
-- 
+- **Navbar** e **Footer** con Blade Components
+- **Autenticazione** con Laravel Fortify
+- Relazioni **one to many**:
+    - User - Articles
+    - Category - Articles
 
