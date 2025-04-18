@@ -54,7 +54,7 @@
 
         <div class="col-12 col-md-4">
 
-            <div class="card"">
+            <div class="card">
                 <div class="card-body">
 
                   <h5 class="card-title">{{$this->title}}</h5>
