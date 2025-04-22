@@ -45,7 +45,8 @@ class CreateArticleForm extends Component
 
         $this->reset();
 
-        return redirect()->route('homepage')->with('success', 'Articolo creato con successo');
+        sleep(2);
+        return redirect()->route('homepage', $this->article);
 
     }
 

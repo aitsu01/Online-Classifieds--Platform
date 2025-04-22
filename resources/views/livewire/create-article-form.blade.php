@@ -1,8 +1,9 @@
 <div>
+    
     <div class="row justify-content-around">
-
+        
         <div class="col-12 col-md-6">
-
+            
             <form wire:submit="save">
 
             <div class="mb-3">
@@ -51,23 +52,36 @@
                 <button type="submit" class="btn btn-primary mt-3">Submit</button>
             </form>
         </div>
-
-        <div class="col-12 col-md-4">
-
-            <div class="card">
+        
+        <div class="col-12 col-md-3">
+            
+            <div class="card card-custom">
                 <div class="card-body">
+<<<<<<< HEAD
 
                   <h5 class="card-title">{{$this->title}}</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary"><strong>Venditore:</strong> {{auth()->user()->name}}</h6>
                   <p class="card-text">{{$this->description}}</p>
-                  <h6 class="card-subtitle mb-2 text-body-secondary"><strong>Prezzo:</strong>${{$this->price}}</h6>
+                  <h6 class="card-subtitle mb-2 text-body-secondary"><strong>Prezzo:</strong>€{{$this->price}}</h6>
                   <h6 class="card-subtitle mb-2 text-body-secondary"><strong>Categoria: {{ optional ($this->categories->firstWhere('id', $this->category))->name }}</h6>
                   
                   
                   
+=======
+                    
+                    <h5 class="card-title accento text-uppercase fs-2 mb-2">{{$this->title}}</h5>
+                    <h6 class="card-subtitle mb-2 accento"><strong>Venditore:</strong> {{auth()->user()->name}}</h6>
+                    <p class="card-text accento text-end my-4">{{$this->description}}</p>
+                    <h6 class="card-subtitle my-2 fs-5 accento"><strong>Prezzo:</strong>{{$this->price}} €</h6>
+                    <h6 class="card-subtitle mb-2 accento"><strong>Categoria: {{ optional ($this->categories->firstWhere('id', $this->category))->name }}</h6>
+                        
+                        
+                        
+                    </div>
+>>>>>>> c38171de1349a0c5a290eeff7d4bca7b330443f4
                 </div>
-              </div>
+            </div>
+            
         </div>
-
     </div>
-</div>
+    

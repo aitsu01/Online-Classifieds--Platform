@@ -4,6 +4,10 @@
     --color-accent: rgb(253, 225, 45);
 }
 
+.accento {
+    color: var(--color-accent);
+}
+
 body {
     background-color: var(--color-primary);
 }
@@ -205,6 +209,114 @@ li.footerItem > a.footerItem:hover{
 .carosello {
     height: 40vh;
     width: 100%;
+}
+
+/* stile cards */
+
+.card-custom {
+  border: 5px solid var(--color-accent);
+  border-radius: 20px;
+  background: linear-gradient(120deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 204, 0.701) 50%, rgba(255, 255, 255, 0) 100%), var(--color-secondary);
+  background-size: 1000%;
+  background-position: top left;
+  transition: 1s;
+
+  height: 100%; /* Assicura che abbiano tutte la stessa altezza */
+  text-overflow: clip;
+ 
+}
+
+.card-custom:hover {
+  background-position: bottom right;
+}
+
+.btn-custom {
+  background: var(--color-accent);
+  color: var(--color-secondary);
+}
+
+.btn-custom:hover {
+  color: var(--color-accent);
+}
+
+.btn-custom1{
+  background: var(--color-secondary);
+  color: var(--color-accent);
+  border: 1px solid var(--color-accent);
+}
+
+.btn:focus{
+    background: var(--color-secondary);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 0 0 0;
+  }
+
+/* stile carosello */
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper {
+  width: 100%;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.mySwiper2 {
+  height: 80%;
+  width: 100%;
+}
+
+.mySwiper {
+  height: 20%;
+  box-sizing: border-box;
+  padding: 10px 0;
+}
+
+.mySwiper .swiper-slide {
+  width: 25%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+.mySwiper .swiper-slide-thumb-active {
+  opacity: 1;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* stile modal */
+.bg-modal {
+  background-color: #6df3a9;
     object-fit: cover;
 }
 
