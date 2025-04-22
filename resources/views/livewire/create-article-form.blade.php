@@ -7,7 +7,7 @@
             <form wire:submit="save">
 
             <div class="mb-3">
-                <label for="title" class="form-label">Titolo</label>
+                <label for="title" class="form-label fs-4 fw-bold font1">Titolo</label>
                 <input type="text" class="form-control @error ('title') is-invalid @enderror" id="title" wire:model.live="title">
                 @error('title')
                 <div class="text-danger">{{ $message }}</div>
@@ -17,7 +17,7 @@
             
 
             <div class="mb-3">
-                <label for="description" class="form-label">Descrizione</label>
+                <label for="description" class="form-label fs-4 fw-bold font1">Descrizione</label>
                 <input type="text" class="form-control @error ('description') is-invalid @enderror" id="description" wire:model.live="description">
                 @error('description')
                 <div class=" text-danger">{{ $message }}</div>
@@ -25,20 +25,25 @@
             </div>
 
 
-            <div class="mb-3">
-                <label for="price" class="form-label">Prezzo</label>
-                <input type="number" class="form-control @error ('price') is-invalid @enderror" id="price" wire:model.live="price">
+            <div class="mb-3 d-flex">
+                <label for="price" class="form-label fs-4 fw-bold font1 me-3">€</label>
+                <input type="number" step="any" class="form-control @error ('price') is-invalid @enderror font1" id="price" wire:model.live="price">
                 @error('price')
                 <div class=" text-danger">{{ $message }}</div>
                 @enderror
             </div>
 
             <div>
-                <select class="form-control @error ('category') is-invalid @enderror" id="category" wire:model.live="category">
-                    <option label disable>Seleziona una categoria</option>
+                <select class="form-control @error ('category') is-invalid @enderror font1" id="category" wire:model.live="category">
+                    <option label disable class="fs-4 fw-bold font1">Seleziona una categoria</option>
 
                     @foreach ($this->categories as $category)
-                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        <option class="fs-5" value="{{$category->id}}">{{$category->name}}</option>
+
+                        @if (!$loop->last)
+                            <hr class="dropdown-divider">
+                        @endif
+
                     @endforeach
 
                 </select>
@@ -49,20 +54,20 @@
            
 
 
-                <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                <button type="submit" class="btn btn-custom mt-3 fs-4 font1 fw-bold">Submit</button>
             </form>
         </div>
         
         <div class="col-12 col-md-3">
             
-            <div class="card card-custom">
-                <div class="card-body">
-                    
-                    <h5 class="card-title accento text-uppercase fs-2 mb-2">{{$this->title}}</h5>
-                    <h6 class="card-subtitle mb-2 accento"><strong>Venditore:</strong> {{auth()->user()->name}}</h6>
-                    <p class="card-text accento text-end my-4">{{$this->description}}</p>
-                    <h6 class="card-subtitle my-2 fs-5 accento"><strong>Prezzo:</strong>{{$this->price}} €</h6>
-                    <h6 class="card-subtitle mb-2 accento"><strong>Categoria: {{ optional ($this->categories->firstWhere('id', $this->category))->name }}</h6>
+            <div class="card card-custom pe-3">
+                <div class="card-body d-flex flex-column align-items-start justify-content-between overflow-hidden">
+
+                    <h5 class="card-title text-uppercase fs-2 mb-2">{{$this->title}}</h5>
+                    <h6 class="card-subtitle mb-2 accento"><strong>Venditore:</strong> <span class="cardTxt">{{auth()->user()->name}}</span></h6>
+                    <p class="card-text accento text-end my-4 fs-6 text-truncate"><span class="cardTxt">{{$this->description}}</span></p>
+                    <h6 class="card-subtitle my-2 fs-5 accento font1"><strong>Prezzo:</strong><span class="cardTxt font1">{{$this->price}}€</span></h6>
+                    <h6 class="card-subtitle mb-2 accento"><strong>Categoria:<span class="cardLink"> {{ optional ($this->categories->firstWhere('id', $this->category))->name }} </span></h6>
                         
                         
                         

@@ -22,7 +22,7 @@
 <body>
     <x-navbar/>
     
-    <div class="container-fluid pattern min-vh-100">
+    <div class="container-fluid pattern min-vh-100 mt-5">
         {{ $slot }}
     </div>
     

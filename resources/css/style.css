@@ -195,7 +195,7 @@ nav .dropdown-item:hover{
 }
 
 .pattern {
-  background: linear-gradient(rgba(254, 247, 255, 0.541), var(--color-primary)), url("/public/media/bg-test.png");
+  background: linear-gradient(rgba(254, 247, 255, 0.724), var(--color-primary)), url("/public/media/bg-test.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -275,7 +275,14 @@ li.footerItem > a.footerItem:hover{
 }
 
 .btn-custom:hover {
+  background: var(--color-secondary);
   color: var(--color-accent);
+}
+
+.btn-custom:hover {
+  color: var(--color-accent);
+  background-color: var(--color-secondary);
+  border: 1px var(--color-accent) solid;
 }
 
 .btn-custom1{
@@ -291,9 +298,26 @@ li.footerItem > a.footerItem:hover{
     box-shadow: 0 0 0 0;
   }
 
+  /* PERSONALIZZAZIONE FORM */
+
+  .form-label { 
+      background-color: var(--color-secondary);
+      color: var(--color-primary);
+      padding: 0.2vw 0.5vw;
+      border-radius: 0.2vw;
+  }
+
+  .form-control{
+    border: var(--color-secondary) solid 2px;
+  }
+
   .form-control:focus {
     border-color: var(--color-accent);
     box-shadow: 0 0 0 0;
+  }
+
+  .formOption:hover {
+    background-color: var(--color-accent);
   }
 
   .cardLink {
