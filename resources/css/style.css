@@ -1,3 +1,4 @@
+/* IMPOSTAZIONI GENERALI */
 :root {
     --color-primary: rgb(254, 247, 255);
     --color-secondary: rgb(30, 2, 26);
@@ -10,6 +11,14 @@
 
 body {
     background-color: var(--color-primary);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .font1 {
@@ -70,7 +79,7 @@ body {
 /* LINKS  */
 
 .navLink, .activeNavLink {
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     padding: 0.5vw 1vw;
     display: inline-block;
     box-sizing: border-box;
@@ -113,7 +122,7 @@ body {
     border-radius: 0.3vw;
     height: 100%;
     padding: 1.2vw;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
 }
 
 .searchControl:focus, .navBtn:focus{
@@ -129,7 +138,7 @@ body {
 .searchControl::placeholder{
     color: var(--color-primary);
     font-style: italic;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
 }
 
 .navBtn{
@@ -139,7 +148,7 @@ body {
     border-right: 1px solid var(--color-accent);
     display: flex;
     align-items: center;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     padding: 1.2vw;
 }
 
@@ -171,6 +180,7 @@ form>.navBtn:hover{
 
 nav .dropdown-item{
     color: var(--color-primary);
+    font-size: 1.4vw;
 }
 
 nav .dropdown-item:hover{
@@ -284,6 +294,19 @@ li.footerItem > a.footerItem:hover{
   .form-control:focus {
     border-color: var(--color-accent);
     box-shadow: 0 0 0 0;
+  }
+
+  .cardLink {
+    text-decoration: underline;
+    color: var(--color-primary);
+  }
+
+  .cardLink:hover {
+    color: var(--color-accent);
+  }
+
+  .cardTxt {
+    color: var(--color-primary);
   }
 
 /* stile carosello */
