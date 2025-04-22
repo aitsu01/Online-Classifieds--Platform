@@ -220,10 +220,10 @@ li.footerItem > a.footerItem:hover{
   background-size: 1000%;
   background-position: top left;
   transition: 1s;
-  
+
   height: 100%; /* Assicura che abbiano tutte la stessa altezza */
   text-overflow: clip;
-  transition: transform 0.2s ease-in-out;
+ 
 }
 
 .card-custom:hover {
