@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="'Registrati'">
   
   <div class="row mt-5">
     <div class="col-12 my-5">

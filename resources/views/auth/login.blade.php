@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="'Login'">
     <div class="container">
         <div class="row mt-5">
             <div class="col-12 my-5">

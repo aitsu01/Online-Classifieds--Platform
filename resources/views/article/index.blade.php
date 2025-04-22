@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="'Tutti gli annunci'">
     <div class="row my-5">
         <div class="col-12">
             <h2 class="text-center mt-5 titolo font1 fw-bold">Tutti gli annunci</h2>

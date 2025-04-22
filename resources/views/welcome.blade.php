@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="'Presto'">>
     
     <div class="row align-items-center v70">
         

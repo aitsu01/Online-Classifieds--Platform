@@ -1,5 +1,5 @@
 
-<x-layout>
+<x-layout :title="'Crea un nuovo annuncio'">
     
         <div class="row mt-5">
             <div class="col-12">
