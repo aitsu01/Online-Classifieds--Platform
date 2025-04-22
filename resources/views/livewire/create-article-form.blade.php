@@ -9,7 +9,7 @@
                 <label for="title" class="form-label">Titolo</label>
                 <input type="text" class="form-control @error ('title') is-invalid @enderror" id="title" wire:model.live="title">
                 @error('title')
-                <div class=" text-danger">{{ $message }}</div>
+                <div class="text-danger">{{ $message }}</div>
                 @enderror
             
             </div>
@@ -48,7 +48,7 @@
            
 
 
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary mt-3">Submit</button>
             </form>
         </div>
 
