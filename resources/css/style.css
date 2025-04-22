@@ -1,7 +1,7 @@
 :root {
-    --color-primary: rgb(235, 242, 250);
-    --color-secondary: rgb(30, 16, 20);
-    --color-accent: rgb(253, 225, 45);
+    --color-primary: rgb(254, 247, 255);
+    --color-secondary: rgb(30, 2, 26);
+    --color-accent: rgb(222, 253, 45);
 }
 
 .accento {
@@ -12,8 +12,18 @@ body {
     background-color: var(--color-primary);
 }
 
+.font1 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+  }
+
+
 * {
-    font-family: 'Open Sans', sans-serif;
+  font-family: "Goudy Bookletter 1911", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 /* STILE NAVBAR */
@@ -29,6 +39,9 @@ body {
     justify-content: center;
     align-items: center;
     color: var(--color-accent);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
     font-size: 1.6vw;
     font-weight: 700;
     width: 8vw;
@@ -91,7 +104,7 @@ body {
     border-radius: 0.3vw;
     overflow: visible;
     position: relative;
-    height: 4vw;
+    height: 3vw;
 }
 
 .searchControl{
@@ -165,7 +178,23 @@ nav .dropdown-item:hover{
     color: var(--color-secondary);
 }
 
+/* STILE PAGINA HOME */
 
+.v70 {
+  height: 70vh;
+}
+
+.pattern {
+  background: linear-gradient(rgba(254, 247, 255, 0.541), var(--color-primary)), url("/public/media/bg-test.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.titolo {
+  font-size: 8vh;
+  font-weight: 600;
+  text-shadow: 2px 2px 5px var(--color-accent);
+}
 
 /* STILE FOOTER */
 .footerLink{
@@ -216,7 +245,7 @@ li.footerItem > a.footerItem:hover{
 .card-custom {
   border: 5px solid var(--color-accent);
   border-radius: 20px;
-  background: linear-gradient(120deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 204, 0.701) 50%, rgba(255, 255, 255, 0) 100%), var(--color-secondary);
+  background: linear-gradient(120deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.701) 50%, rgba(255, 255, 255, 0) 100%), var(--color-secondary);
   background-size: 1000%;
   background-position: top left;
   transition: 1s;
@@ -249,6 +278,11 @@ li.footerItem > a.footerItem:hover{
     background: var(--color-secondary);
     color: var(--color-accent);
     border: 1px solid var(--color-accent);
+    box-shadow: 0 0 0 0;
+  }
+
+  .form-control:focus {
+    border-color: var(--color-accent);
     box-shadow: 0 0 0 0;
   }
 
