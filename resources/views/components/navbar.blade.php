@@ -52,7 +52,7 @@
               Bentornat*, {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('article.create') }}">Crea articolo</a></li>
+              <li><a class="dropdown-item" href="{{ route('article.create') }}">Crea annuncio</a></li>
               <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
                 {{-- <li><hr class="dropdown-divider"></li>
                 <li><a class="dropdown-item" href="#">Diventa moderatore</a></li> --}}
@@ -62,7 +62,7 @@
           @endauth
         
           <li>
-            <a class="@if(Route::current()->getName() == 'article.index') activeNavLink @endif nav-link navLink" href="{{ route('article.index') }}">Tutti gli articoli</a>
+            <a class="@if(Route::current()->getName() == 'article.index') activeNavLink @endif nav-link navLink" href="{{ route('article.index') }}">Tutti gli annunci</a>
           </li>
        
 

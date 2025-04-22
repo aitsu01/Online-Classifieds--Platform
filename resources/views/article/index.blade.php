@@ -1,7 +1,7 @@
 <x-layout>
     <div class="row my-5">
         <div class="col-12">
-            <h2 class="text-center mt-5 titolo font1 fw-bold">Tutti gli articoli</h2>
+            <h2 class="text-center mt-5 titolo font1 fw-bold">Tutti gli annunci</h2>
         </div>
     </div>
     
@@ -10,7 +10,7 @@
         <x-card :article="$article"/>
         @empty
         
-        <h3 class="text-center">Non sono ancora presenti articoli</h3>
+        <h3 class="text-center">Non sono ancora presenti annunci</h3>
         
         @endforelse
     </div>

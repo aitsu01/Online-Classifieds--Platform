@@ -21,4 +21,8 @@
 - visualizzazione messaggi di conferma per UX 
 - homepage con **articoli più recenti**
 - pagina dettaglio articoli con **carosello** immagini.
+- esplorazione articoli per categoria:
+    -dalla navbar con dropdown
+    -dalle card e dalla pagina dettaglio con collegamento sul nome della categoria
+    
 
