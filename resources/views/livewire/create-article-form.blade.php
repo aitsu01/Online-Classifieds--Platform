@@ -54,7 +54,26 @@
            
 
 
-                <button type="submit" class="btn btn-custom mt-3 fs-4 font1 fw-bold">Submit</button>
+                <!-- Trigger modal -->
+               <button type="submit" class="btn btn-custom1 mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Crea articolo
+                </button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">               
+                    <div class="modal-dialog">                    
+                        <div class="modal-content bg-modal">                        
+                            <div class="modal-header">                            
+                                <h1 class="modal-title fs-5 text-uppercase" id="exampleModalLabel">{{$this->title}}</h1>                                
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                                
+                            </div>
+                            <div class="modal-body text-center">                            
+                                <p class="fs-3">Congratulazioni!!!</p>
+                                <p class="fs-4">Hai caricato il tuo articolo correttamente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </form>
         </div>
         
@@ -63,7 +82,7 @@
             <div class="card card-custom pe-3">
                 <div class="card-body d-flex flex-column align-items-start justify-content-between overflow-hidden">
 
-                    <h5 class="card-title text-uppercase fs-2 mb-2">{{$this->title}}</h5>
+                    <h5 class="card-title text-uppercase fs-2 mb-2 accento">{{$this->title}}</h5>
                     <h6 class="card-subtitle mb-2 accento"><strong>Venditore:</strong> <span class="cardTxt">{{auth()->user()->name}}</span></h6>
                     <p class="card-text accento text-end my-4 fs-6 text-truncate"><span class="cardTxt">{{$this->description}}</span></p>
                     <h6 class="card-subtitle my-2 fs-5 accento font1"><strong>Prezzo:</strong><span class="cardTxt font1">{{$this->price}}€</span></h6>

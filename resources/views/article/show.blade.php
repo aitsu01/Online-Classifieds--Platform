@@ -8,22 +8,22 @@
             </div>
         </div>
 
-    <div class="bordoTotale">    
+    <div class="bordoTotale w-75 mb-5 mx-auto">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-4 d-flex flex-column align-items-start justify-content-evenly bordo">
+            <div class="col-12 col-md-6 d-flex flex-column align-items-start justify-content-evenly bordo">
                 <div>
-                    <p class="fs-1">Descrizione: {{$article->description}}</p>
+                    <p class="fs-1 accento">Descrizione: <span class="cardTxt">{{$article->description}}</span></p>
                 </div>
                 <div>
-                    <p class="fs-2">Prezzo: {{$article->price}} €</p>
-                    <p class="fs-2">Venditore: {{$article->user()->get()->first()->name}}</p>
-                    <p class="fs-2">Categoria: {{$article->category->name}}</p>
+                    <p class="fs-2 accento">Prezzo: <span class="cardTxt font1">{{$article->price}} €</span></p>
+                    <p class="fs-2 accento">Venditore: <span class="cardTxt">{{$article->user()->get()->first()->name}}</span></p>
+                    <a href="{{ route('byCategory', ['category' => $article->category]) }}"><p class="fs-2 accento">Categoria: <span class="cardLink">{{$article->category->name}}</span></p></a>
                 </div>
             </div>
             
-            <div class="col-12 col-md-4">
+            <div class="col-12 col-md-6">
                 <!-- Swiper -->
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 rounded">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
@@ -95,6 +95,6 @@
                 </div>
             </div>
         </div>
-        
-    </div>
+    </div>  
+
 </x-layout>
