@@ -11,30 +11,25 @@
     {{-- Google Font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Homenaje&family=Iceberg&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Goudy+Bookletter+1911&display=swap" rel="stylesheet">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+    
 </head>
 
 
 <body>
     <x-navbar/>
-
-    <div class="container-fluid min-vh-100">
+    
+    <div class="container-fluid pattern min-vh-100">
         {{ $slot }}
     </div>
-
+    
     <x-footer/>
 </body>
 </html>
-        
+
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
-<<<<<<< HEAD
-=======
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
->>>>>>> c38171de1349a0c5a290eeff7d4bca7b330443f4
