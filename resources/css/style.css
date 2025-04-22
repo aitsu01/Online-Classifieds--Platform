@@ -348,6 +348,8 @@ li.footerItem > a.footerItem:hover{
 
 
 
+
+
 /* MEDIA QUERIES NAVBAR */
 @media screen and (max-width: 992px) {    
  .navLink, .activeNavLink{

@@ -34,7 +34,3 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
-<<<<<<< HEAD
-=======
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> 
->>>>>>> c38171de1349a0c5a290eeff7d4bca7b330443f4
