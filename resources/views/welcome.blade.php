@@ -1,9 +1,9 @@
 <x-layout>
     
-    <div class="row mt-5">
+    <div class="row align-items-center v70">
         
         <div class="col-12 my-5">
-            <h1 class="text-center secondario">Presto project</h1>
+            <h1 class="text-center secondario font1 titolo">Presto</h1>
         </div>
     </div>
     @auth
