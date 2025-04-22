@@ -12,12 +12,12 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 d-flex flex-column align-items-start justify-content-evenly bordo">
                 <div>
-                    <p class="fs-1 accento">Descrizione: <span class="cardTxt">{{$article->description}}</span></p>
+                    <p class="fs-4 accento">Descrizione: <span class="cardTxt">{{$article->description}}</span></p>
                 </div>
                 <div>
-                    <p class="fs-2 accento">Prezzo: <span class="cardTxt font1">{{$article->price}} €</span></p>
-                    <p class="fs-2 accento">Venditore: <span class="cardTxt">{{$article->user()->get()->first()->name}}</span></p>
-                    <a href="{{ route('byCategory', ['category' => $article->category]) }}"><p class="fs-2 accento">Categoria: <span class="cardLink">{{$article->category->name}}</span></p></a>
+                    <p class="fs-5 accento">Prezzo: <span class="cardTxt font1">{{$article->price}} €</span></p>
+                    <p class="fs-5 accento">Venditore: <span class="cardTxt">{{$article->user()->get()->first()->name}}</span></p>
+                    <a href="{{ route('byCategory', ['category' => $article->category]) }}"><p class="fs-5 accento">Categoria: <span class="cardLink">{{$article->category->name}}</span></p></a>
                 </div>
             </div>
             

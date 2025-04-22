@@ -1,6 +1,6 @@
 <footer class="bg-navbar container-fluid py-3">
 
-  <div class="row">
+  <div class="row justify-content-evenly">
     
     <div class="col-4">
       
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <div class="col-4">
+    {{-- <div class="col-4">
       
       <div class="row">
         
@@ -42,7 +42,7 @@
         </div>
 
       </div>
-    </div>
+    </div> --}}
 
     <div class="col-4">
       

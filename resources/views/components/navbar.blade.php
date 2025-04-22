@@ -15,10 +15,10 @@
             </a>
 
             {{-- form di ricerca --}}
-            <form class="d-flex" role="search">
+            {{-- <form class="d-flex" role="search">
               <input class="form-control me-2 searchControl" type="search" placeholder="Cerca su Presto..." aria-label="Search">
               <button class="btn navBtn" type="submit"><i class="bi bi-search"></i></button>
-            </form>
+            </form> --}}
 
             {{-- dropdown filtro categorie --}}
             <ul class="dropdown-menu">
@@ -54,8 +54,8 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{ route('article.create') }}">Crea articolo</a></li>
               <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Diventa moderatore</a></li>
+                {{-- <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Diventa moderatore</a></li> --}}
               <form action="{{route('logout')}}" method="POST" id="logout">@csrf</form></li>
             </ul>
           </li>
