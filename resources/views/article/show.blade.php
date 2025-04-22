@@ -1,4 +1,6 @@
 <x-layout>
+
+    {{-- CAROSELLO DI ANNA --}}
     <div class="row mt-5">
         <div class="col-12">
             <h1 class="text-center mt-5">Dettagli dell'articolo {{$article->title}}</h1>
@@ -77,15 +79,17 @@
                     </div>
                 </div>
             </div>
-    </div>
-    </div>
-    
-    
-    <div class="row justify-content-center mt-3">
-        <div class="col-1">
-            <p>{{$article->description}}</p>
-            <p>Prezzo: {{$article->price}}</p>
-            <p>Categoria: {{$article->category->name}}</p>
+
+            <div class="row">
+                <div class="col-12">
+                    <p>Categoria: {{$article->category->name}}</p>
+                </div>
+            </div>
+
+
+
+            
         </div>
-    </div>        
+    
+    </div>     
 </x-layout>
