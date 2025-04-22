@@ -1,5 +1,7 @@
 <x-layout>
-    <div class="row mt-5">
+
+    {{-- CAROSELLO DI ANNA --}}
+    {{-- <div class="row mt-5">
 
         <div class="col-6 mt-5">
             
@@ -74,7 +76,7 @@
 
 
             
-        </div>
+        </div> --}}
     
     
 
@@ -84,7 +86,7 @@
     {{-- </div> --}}
       
     
-    
+{{--     
     <div class="row justify-content-center mt-3">
 
         <div class="col-1">
@@ -98,5 +100,5 @@
         </div>
 
     </div>  
-</div>      
+</div>  --}}     
 </x-layout>

@@ -16,4 +16,9 @@
 - Relazioni **one to many**:
     - User - Articles
     - Category - Articles
+- **CRUD** con **Livewire**
+    -pulsante "**crea articolo**" nella home e nella navbar
+- visualizzazione messaggi di conferma per UX 
+- homepage con **articoli più recenti**
+- pagina dettaglio articoli con **carosello** immagini.
 
