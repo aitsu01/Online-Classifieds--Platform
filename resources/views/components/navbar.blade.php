@@ -22,7 +22,14 @@
 
             {{-- dropdown filtro categorie --}}
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{{ route('article.create') }}">varie categorie :P </a></li>
+            @foreach ($categories as $category)
+            <li><a class="dropdown-item text-capitalize" 
+             href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
+           </li>
+           @if (!$loop->last)
+           <hr class="dropdown-divider">
+           @endif
+           @endforeach
             </ul>
             
           </li>
