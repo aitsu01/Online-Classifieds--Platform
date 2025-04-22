@@ -1,5 +1,5 @@
 
-<x-layout>
+<x-layout :title="$category->name">
 <div class="row my-5">
         <div class="col-12">
             <h2 class="text-center my-5">Articoli della categoria {{$category->name}}</h2>
