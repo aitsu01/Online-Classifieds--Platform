@@ -13,7 +13,8 @@ class ArticleController extends Controller implements HasMiddleware
 
     public static function middleware() {
         return [
-            new Middleware('auth', only: ['create']),
+            new Middleware('auth', only: ['create','show']),// modifica fatta solo gli utenti loggati o registrati posso vedere il carosello delgi articoli
+           
         ];
     }
     public function create() {
