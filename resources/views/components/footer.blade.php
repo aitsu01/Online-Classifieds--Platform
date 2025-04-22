@@ -2,7 +2,7 @@
 
   <div class="row">
     
-    <div class="col-6">
+    <div class="col-4">
       
       <div class="row">
         
@@ -24,8 +24,27 @@
       </div>
     </div>
 
+    <div class="col-4">
+      
+      <div class="row">
+        
+        <div class="col-12 text-center p-0">
+            <h3 class="footerTitle">Lavora con noi</h3>
+        </div>
 
-    <div class="col-6">
+      </div>
+
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center p-0">
+          <ul class="m-0 p-0 d-flex flex-column align-items-center">
+            <li class="footerItem"><a href="#" class="footerItem">Diventa moderatore</a></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-4">
       
       <div class="row">
         

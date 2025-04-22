@@ -1,43 +1,70 @@
 <nav class="navbar navbar-expand-lg bg-navbar fixed-top" data-bs-theme="dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="{{ route('homepage') }}">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ route('homepage') }}">Home</a>
+    
+  <div class="container-fluid">
+      
+    <a class=" @if(Route::current()->getName() == 'homepage') activeNavBrand text-decoration-none @else navbar-brand @endif p-0 mx-auto my-2 m-lg-0" href="{{ route('homepage') }}"></a>
+      
+      
+        <ul class="navbar-nav mb-lg-0 w-100 h-100 d-flex flex-row justify-content-around align-items-center">
+          
+          <li class="nav-item dropdown d-flex searchBox">
+            
+            {{-- filtro per categorie  --}}
+            <a class="nav-link dropdown-toggle navBtn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorie
+            </a>
+
+            {{-- form di ricerca --}}
+            <form class="d-flex" role="search">
+              <input class="form-control me-2 searchControl" type="search" placeholder="Cerca su Presto..." aria-label="Search">
+              <button class="btn navBtn" type="submit"><i class="bi bi-search"></i></button>
+            </form>
+
+            {{-- dropdown filtro categorie --}}
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{ route('article.create') }}">varie categorie :P </a></li>
+            </ul>
+            
           </li>
-          <li>
-            <a class="nav-link" href="{{ route('article.index') }}">Articoli</a>
-          </li>
+          
           @guest
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('login') }}">Login</a>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link navLink dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ospite</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{{ route('login') }}">Effettua il login</a></li>
+              <li><a class="dropdown-item" href="{{ route('register') }}">Registrati</a></li>
+            </ul>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="{{ route('register') }}">Registrati</a>
-          </li>
+
           @endguest
+
           @auth
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Benvenuto {{ Auth::user()->name }}
+            <a class="activeNavLink nav-link navLink dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Bentornat*, {{ Auth::user()->name }}
             </a>
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{ route('article.create') }}">Crea articolo</a></li>
-              <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Diventa moderatore</a></li>
               <form action="{{route('logout')}}" method="POST" id="logout">@csrf</form></li>
             </ul>
           </li>
           @endauth
+        
+          <li>
+            <a class="@if(Route::current()->getName() == 'article.index') activeNavLink @endif nav-link navLink" href="{{ route('article.index') }}">Tutti gli articoli</a>
+          </li>
+       
+
+          
         </ul>
-        {{-- <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form> --}}
-      </div>
+
+        
+
+        
+      
     </div>
   </nav>
