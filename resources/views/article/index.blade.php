@@ -1,7 +1,7 @@
 <x-layout>
-    <div class="row v70 align-items-center">
-        <div class="col-12 mt-5">
-            <h2 class="text-center my-5 titolo font1">Tutti gli articoli</h2>
+    <div class="row my-5">
+        <div class="col-12">
+            <h2 class="text-center mt-5">Tutti gli articoli</h2>
         </div>
     </div>
     
