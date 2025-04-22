@@ -220,6 +220,8 @@ li.footerItem > a.footerItem:hover{
   background-size: 1000%;
   background-position: top left;
   transition: 1s;
+  height: 100%;
+  text-overflow: clip; 
 }
 
 .card-custom:hover {
@@ -240,6 +242,13 @@ li.footerItem > a.footerItem:hover{
   color: var(--color-accent);
   border: 1px solid var(--color-accent);
 }
+
+.btn:focus{
+    background: var(--color-secondary);
+    color: var(--color-accent);
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 0 0 0;
+  }
 
 /* stile carosello */
 .swiper {
