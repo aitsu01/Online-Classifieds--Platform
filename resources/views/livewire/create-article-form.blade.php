@@ -60,7 +60,7 @@
                   <h5 class="card-title">{{$this->title}}</h5>
                   <h6 class="card-subtitle mb-2 text-body-secondary"><strong>Venditore:</strong> {{auth()->user()->name}}</h6>
                   <p class="card-text">{{$this->description}}</p>
-                  <h6 class="card-subtitle mb-2 text-body-secondary"><strong>Prezzo:</strong>${{$this->price}}</h6>
+                  <h6 class="card-subtitle mb-2 text-body-secondary"><strong>Prezzo:</strong>€{{$this->price}}</h6>
                   <h6 class="card-subtitle mb-2 text-body-secondary"><strong>Categoria: {{ optional ($this->categories->firstWhere('id', $this->category))->name }}</h6>
                   
                   
