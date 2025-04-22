@@ -355,6 +355,7 @@ li.footerItem > a.footerItem:hover{
   object-fit: cover;
 }
 
+
 .swiper {
   width: 100%;
   height: 300px;
@@ -399,6 +400,19 @@ li.footerItem > a.footerItem:hover{
 .bg-modal {
   background-color: #6df3a9;
     object-fit: cover;
+}
+
+/* stile pagina dettaglio */
+.bordo {
+  border: 5px solid var(--color-secondary);
+  border-radius: 0.8vw;
+  padding: 4vw;
+}
+
+.bordoTotale {
+  background-color: #6df3a9;
+  padding: 2vh;
+  margin-bottom: 3vh;
 }
 
 
