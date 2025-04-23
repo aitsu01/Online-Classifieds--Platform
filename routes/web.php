@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PublicController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\RevisorController;
 
 
 
@@ -11,7 +12,7 @@ Route::get('/create/article', [ArticleController::class, 'create'])->name('artic
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
 Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('byCategory');
-
+Route::get('/revisor/index',[RevisorController::class, 'index'])->name('revisor.index');
 
 
 

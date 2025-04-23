@@ -53,8 +53,8 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{ route('article.create') }}">Crea annuncio</a></li>
               <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
-                {{-- <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Diventa moderatore</a></li> --}}
+                 <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Diventa moderatore</a></li> 
               <form action="{{route('logout')}}" method="POST" id="logout">@csrf</form></li>
             </ul>
           </li>
