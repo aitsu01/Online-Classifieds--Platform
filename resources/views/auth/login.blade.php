@@ -11,8 +11,7 @@
                     @csrf
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label font1 fs-3 fw-bold">Indirizzo Email</label>
-                      <input type="email" class="form-control @error
-                      ('email') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                      <input type="email" class="form-control @error ('email') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                       @error('email')
                       <div class="text-danger">
                         {{$message}}
