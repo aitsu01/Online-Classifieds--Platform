@@ -25,8 +25,8 @@
             </div>
 
 
-            <div class="mb-3 d-flex">
-                <label for="price" class="form-label fs-4 fw-bold font1 me-3">€</label>
+            <div class="mb-3">
+                <label for="price" class="form-label fs-4 fw-bold font1 me-3">Prezzo</label>
                 <input type="number" step="any" class="form-control @error ('price') is-invalid @enderror font1" id="price" wire:model.live="price">
                 @error('price')
                 <div class=" text-danger">{{ $message }}</div>
@@ -55,11 +55,15 @@
 
 
                 <!-- Trigger modal -->
+                
                <button type="submit" class="btn btn-custom1 mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Crea articolo
+                    Crea annuncio
                 </button>
+                
 
                   <!-- Modal -->
+                  
+                  
                   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">               
                     <div class="modal-dialog">                    
                         <div class="modal-content bg-modal">                        
@@ -69,17 +73,21 @@
                             </div>
                             <div class="modal-body text-center">                            
                                 <p class="fs-3">Congratulazioni!!!</p>
-                                <p class="fs-4">Hai caricato il tuo articolo correttamente</p>
+                                <p class="fs-4">Annuncio creato con successo</p>
                             </div>
                         </div>
                     </div>
                 </div>
+
+               
             </form>
         </div>
         
         <div class="col-12 col-md-3">
             
+            <p class="form-label fs-4 fw-bold font1 me-3 text-center">Anteprima</p>
             <div class="card card-custom pe-3">
+
                 <div class="card-body d-flex flex-column align-items-start justify-content-between overflow-hidden">
 
                     <h5 class="card-title text-uppercase fs-2 mb-2 accento">{{$this->title}}</h5>

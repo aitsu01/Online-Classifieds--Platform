@@ -19,6 +19,7 @@ class CreateArticleForm extends Component
     #[Validate('required')]
     public $category;
     public $categories;
+    public $validatedData;
 
     public $article;
 
@@ -34,6 +35,7 @@ class CreateArticleForm extends Component
     public function save(){
         
         $this->validate();
+        //
         $this->article = Article::create([
             'title' => $this->title,
             'description' => $this->description,
@@ -43,9 +45,16 @@ class CreateArticleForm extends Component
             'user_id' => Auth::id()
         ]);
 
-        $this->reset();
+     
+            sleep(2);
+            $this->reset();
+        
+        
 
-        sleep(2);
+
+        
+
+        
         return redirect()->route('homepage', $this->article);
 
     }
