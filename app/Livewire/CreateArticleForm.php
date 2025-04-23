@@ -44,15 +44,9 @@ class CreateArticleForm extends Component
 
             'user_id' => Auth::id()
         ]);
-
      
-            sleep(2);
-            $this->reset();
-        
-        
-
-
-        
+        sleep(2);
+        $this->reset();
 
         
         return redirect()->route('homepage', $this->article);
