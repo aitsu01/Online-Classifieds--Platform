@@ -28,6 +28,16 @@
     </div>
     
     <x-footer/>
+
+    @if(session('success'))
+    <script>
+        window.sessionSuccess = true;
+    </script>
+@else
+    <script>
+        window.sessionSuccess = false;
+    </script>
+@endif
 </body>
 </html>
 

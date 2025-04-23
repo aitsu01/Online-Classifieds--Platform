@@ -4,13 +4,13 @@
         
         <div class="row my-5">
             <div class="col-12 mt-5">
-                <h1 class="text-center titolo font1 my-5">{{$article->title}}</h1>
+                <h1 class="text-center titolo fs-2 font1 my-5">{{$article->title}}</h1>
             </div>
         </div>
 
-    <div class="bordoTotale w-75 mb-5 mx-auto">
+    <div class="bordoTotale w-md-75 mb-5 ">
         <div class="row justify-content-center">
-            <div class="col-12 col-md-6 d-flex flex-column align-items-start justify-content-evenly bordo">
+            <div class="col-12 col-md-6 d-flex flex-column align-items-start justify-content-evenly bordo w-md-100 h-md-100">
                 <div>
                     <p class="fs-4 accento">Descrizione: <span class="cardTxt">{{$article->description}}</span></p>
                 </div>
@@ -21,7 +21,7 @@
                 </div>
             </div>
             
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-6 bordo">
                 <!-- Swiper -->
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 rounded">
                     <div class="swiper-wrapper">

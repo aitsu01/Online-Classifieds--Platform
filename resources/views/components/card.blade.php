@@ -1,4 +1,4 @@
-<div class="col-12 col-md-3 m-5">
+<div class="col-12 col-lg-3 col-md-5 m-lg-5 mx-0 my-2 p-1">
     <div class="card card-custom pe-3">
         <div class="card-body d-flex flex-column align-items-start justify-content-between overflow-hidden">
             <h5 class="card-title accento fs-2 mb-2 text-uppercase"> <span class="cardTxt">{{$article->title}}</span></h5>

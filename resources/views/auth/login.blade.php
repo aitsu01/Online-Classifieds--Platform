@@ -29,8 +29,8 @@
                     </div>
                     <div class="d-flex justify-content-between align-items-end my-4">
                     <button type="submit" class="btn btn-custom font1 fs-4 fw-bold">Login</button>
-                    <div class="d-flex flex-column">
-                    <p class="font1 fs-5 m-0 fw-bold">Hai già un account?</p>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                    <p class="font1 fs-md-5 fs-6 m-0 fw-bold">Hai già un account?</p>
                     <a href="{{route('register')}}" class="btn btn-custom font1 fs-4 fw-bold">Registrati</a>
                 </div>
                     </div>

@@ -11,8 +11,7 @@
             
             {{-- filtro per categorie  --}}
             <a class="nav-link dropdown-toggle navBtn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorie
-            </a>
+              Categorie</a>
 
             {{-- form di ricerca --}}
             {{-- <form class="d-flex" role="search">
@@ -54,8 +53,12 @@
             <ul class="dropdown-menu">
               <li><a class="dropdown-item" href="{{ route('article.create') }}">Crea annuncio</a></li>
               <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
-                {{-- <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Diventa moderatore</a></li> --}}
+                 <li><hr class="dropdown-divider"></li>
+                 <li><a class="dropdown-item" href="#">Diventa moderatore</a></li>
+                 @if (Auth::user()->is_revisor)
+                 <li><a class="dropdown-item" href="{{ route('revisor.index') }}">Dashboard moderatore
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span></a></li>
+                 @endif 
               <form action="{{route('logout')}}" method="POST" id="logout">@csrf</form></li>
             </ul>
           </li>
