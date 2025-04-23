@@ -14,10 +14,10 @@
               Categorie</a>
 
             {{-- form di ricerca --}}
-            {{-- <form class="d-flex" role="search">
-              <input class="form-control me-2 searchControl" type="search" placeholder="Cerca su Presto..." aria-label="Search">
+            <form class="d-flex" role="search" action="{{ route('article.search') }}" method="GET">
+              <input class="form-control me-2 searchControl" name="query" type="search" placeholder="Cerca su Presto..." aria-label="Search">
               <button class="btn navBtn" type="submit"><i class="bi bi-search"></i></button>
-            </form> --}}
+            </form> 
 
             {{-- dropdown filtro categorie --}}
             <ul class="dropdown-menu">
