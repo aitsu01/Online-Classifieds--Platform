@@ -37,7 +37,7 @@
       <div class="row">
         <div class="col-12 d-flex justify-content-center p-0">
           <ul class="m-0 p-0 d-flex flex-column align-items-center">
-            <li class="footerItem"><a href="#" class="footerItem">Diventa moderatore</a></li>
+            <li class="footerItem"><a href="{{route('become.revisor')}}" class="footerItem">Diventa moderatore</a></li>
           </ul>
         </div>
 

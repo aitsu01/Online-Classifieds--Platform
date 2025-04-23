@@ -6,6 +6,12 @@
     </div>
     @endif
 
+    @if (session()->has('message'))
+    <div class="alert alert-danger text-center shadow rounded w-50 mt-5">
+        {{session('message')}}
+    </div>
+    @endif
+
     @if (session('success'))
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">               
         <div class="modal-dialog">                    
