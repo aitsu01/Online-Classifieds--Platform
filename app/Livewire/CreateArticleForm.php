@@ -35,7 +35,6 @@ class CreateArticleForm extends Component
     public function save(){
         
         $this->validate();
-        //
         $this->article = Article::create([
             'title' => $this->title,
             'description' => $this->description,
@@ -46,16 +45,9 @@ class CreateArticleForm extends Component
         ]);
 
      
-            sleep(2);
             $this->reset();
-        
-        
 
-
-        
-
-        
-        return redirect()->route('homepage', $this->article);
+        return redirect()->route('homepage', $this->article)->with('success', 'Articolo creato con successo');
 
     }
 

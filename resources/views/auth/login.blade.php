@@ -11,8 +11,7 @@
                     @csrf
                     <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label font1 fs-3 fw-bold">Indirizzo Email</label>
-                      <input type="email" class="form-control @error
-                      ('email') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                      <input type="email" class="form-control @error ('email') is-invalid @enderror" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
                       @error('email')
                       <div class="text-danger">
                         {{$message}}
@@ -30,8 +29,8 @@
                     </div>
                     <div class="d-flex justify-content-between align-items-end my-4">
                     <button type="submit" class="btn btn-custom font1 fs-4 fw-bold">Login</button>
-                    <div class="d-flex flex-column">
-                    <p class="font1 fs-5 m-0 fw-bold">Hai già un account?</p>
+                    <div class="d-flex flex-column justify-content-center align-items-center">
+                    <p class="font1 fs-md-5 fs-6 m-0 fw-bold">Hai già un account?</p>
                     <a href="{{route('register')}}" class="btn btn-custom font1 fs-4 fw-bold">Registrati</a>
                 </div>
                     </div>

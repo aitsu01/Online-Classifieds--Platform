@@ -16,3 +16,20 @@ var swiper2 = new Swiper(".mySwiper2", {
     swiper: swiper,
   },
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const modalElement = document.getElementById('exampleModal');
+  
+  if (modalElement && window.sessionSuccess === true) {
+      const myModal = new bootstrap.Modal(modalElement);
+      myModal.show();
+
+      setTimeout(() => {
+        myModal.hide();
+      }, 2000);
+
+  }
+
+  
+
+});

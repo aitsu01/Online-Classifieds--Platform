@@ -11,8 +11,7 @@
             
             {{-- filtro per categorie  --}}
             <a class="nav-link dropdown-toggle navBtn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Categorie
-            </a>
+              Categorie</a>
 
             {{-- form di ricerca --}}
             {{-- <form class="d-flex" role="search">

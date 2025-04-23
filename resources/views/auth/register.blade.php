@@ -47,8 +47,8 @@
         </div>
         <div class="d-flex justify-content-between align-items-end my-4">
           <button type="submit" class="btn btn-custom fs-4 font1 fw-bold">Registrati</button>
-          <div class="d-flex flex-column">
-          <p class="font1 fw-bold fs-5 m-0">Hai già un account?</p>
+          <div class="d-flex flex-column align-items-center justify-content-center">
+          <p class="font1 fw-bold fs-md-5 fs-6 m-0">Hai già un account?</p>
           <a href="{{route('login')}}" class="btn btn-custom fs-4 font1 fw-bold">Login</a>
           </div>
         </div>

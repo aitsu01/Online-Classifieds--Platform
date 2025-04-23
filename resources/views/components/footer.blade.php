@@ -60,19 +60,19 @@
           <ul class="m-0 p-0 d-flex justify-content-center align-items-center">
 
             <li class="footerItem">
-              <a href="" class="footerLink"><i class="bi bi-instagram fs-3 mx-2 "></i></a>
+              <a href="" class="footerLink"><i class="bi bi-instagram fs-md-3 fs-5 mx-2 "></i></a>
             </li>
           
             <li class="footerItem">
-              <a href="" class="footerLink"><i class="bi bi-facebook fs-3 mx-2 "></i></a>
+              <a href="" class="footerLink"><i class="bi bi-facebook fs-md-3 fs-5 mx-2 "></i></a>
             </li>
           
             <li class="footerItem">
-              <a href="" class="footerLink"><i class="bi bi-twitter fs-3 mx-2 "></i></a>
+              <a href="" class="footerLink"><i class="bi bi-twitter fs-md-3 fs-5 mx-2 "></i></a>
             </li>
           
             <li class="footerItem">
-              <a href="" class="footerLink"><i class="bi bi-whatsapp fs-3 mx-2 "></i></a>
+              <a href="" class="footerLink"><i class="bi bi-whatsapp fs-md-3 fs-5 mx-2 "></i></a>
             </li>
             
           </ul>

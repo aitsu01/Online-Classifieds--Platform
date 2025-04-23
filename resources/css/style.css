@@ -113,7 +113,7 @@ a:hover {
     border-radius: 0.3vw;
     overflow: visible;
     position: relative;
-    height: 3vw;
+    height: fit-content;
 }
 
 .searchControl{
@@ -149,7 +149,7 @@ a:hover {
     display: flex;
     align-items: center;
     font-size: 1.4vw;
-    padding: 1.2vw;
+    padding: 0.4vw;
 }
 
 .navBtn:hover{
@@ -271,6 +271,7 @@ li.footerItem > a.footerItem:hover{
 .btn-custom {
   background: var(--color-accent);
   color: var(--color-secondary);
+  width: fit-content;
 }
 
 .btn-custom:hover {
@@ -403,14 +404,6 @@ li.footerItem > a.footerItem:hover{
   object-fit: cover;
 }
 
-.bg-modalErr {
-  background-color: var(--color-secondary);
-  border: 5px solid red;
-  border-radius: 0.8vw;
-  object-fit: cover;
-  color: var(--color-primary);
-}
-
 /* stile pagina dettaglio */
 .bordo {
   border: 8px solid var(--color-accent);
@@ -434,7 +427,7 @@ li.footerItem > a.footerItem:hover{
   color: var(--color-secondary);
   border: 2px solid var(--color-secondary);
   border-radius: 100%;
-  font-size: 1.2vw;
+  font-size: 2vw;
   font-family: "Cinzel", serif;
   font-weight: 600;
   margin: 0.5vw;
@@ -485,16 +478,20 @@ li.footerItem > a.footerItem:hover{
 
 
 /* MEDIA QUERIES NAVBAR */
+
+
+
+/* SCHERMO MEDIO */
 @media screen and (max-width: 992px) {    
- .navLink, .activeNavLink{
-        font-size: 3vw;
-        padding: 0.5vw;
+ .nav-link, .activeNavLink{
+        font-size: 2.8vw;
+        padding: 1vw;
         display: block;
     }
 
     .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item, .navBtn{
         font-size: 2.8vw;
-        width: fit-content;
+        width: 15vw;
     }
 
     .nav-item.dropdown .dropdown-menu {
@@ -511,6 +508,39 @@ li.footerItem > a.footerItem:hover{
         padding: 0;
     }
 
+    .pagination > .page-item > .page-link{
 
+      font-size: 4vw;
+    }
 
+    .footerItem{
+  
+      font-size: 3vw;
+      
+  }
+
+  .footerTitle{
+    font-size: 4vw;
+
+  }
+
+  .bordoTotale{
+    padding: 0;
+    border: 0;
+    margin: 0;
+    background-color: transparent;
+    
+  }
+
+}
+
+/* SCHERMO PICCOLO */
+@media screen and (max-width: 540px){
+  .nav-link, .activeNavLink, .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item, .navBtn {
+    font-size: 4vw;
+  }
+
+  .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item, .navBtn{
+    width: 22vw;
+}
 }

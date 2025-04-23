@@ -54,30 +54,15 @@
            
 
 
-                <!-- Trigger modal -->
+
                 
-               <button type="submit" class="btn btn-custom1 mt-4" data-bs-toggle="modal" data-bs-target="#exampleModal">
+               <button type="submit" class="btn btn-custom1 my-4">
                     Crea annuncio
                 </button>
-                
-
-                  <!-- Modal -->
+        
                   
                   
-                  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">               
-                    <div class="modal-dialog">                    
-                        <div class="modal-content bg-modal">                        
-                            <div class="modal-header">                            
-                                <h1 class="modal-title fs-5 text-uppercase" id="exampleModalLabel">{{$this->title}}</h1>                                
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>                                
-                            </div>
-                            <div class="modal-body text-center">                            
-                                <p class="fs-3">Congratulazioni!!!</p>
-                                <p class="fs-4">Annuncio creato con successo</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                  
 
                
             </form>
@@ -86,7 +71,7 @@
         <div class="col-12 col-md-3">
             
             <p class="form-label fs-4 fw-bold font1 me-3 text-center">Anteprima</p>
-            <div class="card card-custom pe-3">
+            <div class="card card-custom pe-3 mb-5">
 
                 <div class="card-body d-flex flex-column align-items-start justify-content-between overflow-hidden">
 
