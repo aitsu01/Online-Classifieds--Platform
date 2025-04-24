@@ -259,7 +259,7 @@ li.footerItem > a.footerItem:hover{
   background-position: top left;
   transition: 1s;
 
-  height: 60vh; /* Assicura che abbiano tutte la stessa altezza */
+  height: 75vh; /* Assicura che abbiano tutte la stessa altezza */
   text-overflow: clip;
  
 }
