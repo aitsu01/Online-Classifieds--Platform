@@ -54,10 +54,14 @@
               <li><a class="dropdown-item" href="{{ route('article.create') }}">Crea annuncio</a></li>
               <li><a class="dropdown-item" href="" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a>
                  <li><hr class="dropdown-divider"></li>
-                 <li><a class="dropdown-item" href="{{route('become.revisor')}}">Diventa moderatore</a></li>
+                 
+                 
+                 
                  @if (Auth::user()->is_revisor)
-                 <li><a class="dropdown-item" href="{{ route('revisor.index') }}">Dashboard moderatore
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span></a></li>
+                 <li><a class="dropdown-item moderatore" href="{{ route('revisor.index') }}">Dashboard moderatore
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">{{\App\Models\Article::toBeRevisedCount()}}</span></a></li>
+                  @else
+                  <li><a class="dropdown-item" href="{{route('become.revisor')}}">Diventa moderatore</a></li>
                  @endif 
               <form action="{{route('logout')}}" method="POST" id="logout">@csrf</form></li>
             </ul>

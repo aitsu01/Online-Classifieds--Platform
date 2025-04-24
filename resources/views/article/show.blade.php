@@ -19,6 +19,9 @@
                     <p class="fs-5 accento">Venditore: <span class="cardTxt">{{$article->user()->get()->first()->name}}</span></p>
                     <a href="{{ route('byCategory', ['category' => $article->category]) }}"><p class="fs-5 accento">Categoria: <span class="cardLink">{{$article->category->name}}</span></p></a>
                 </div>
+                <div>
+                    <p class="fs-5 accento">Pubblicato il: <span class="cardTxt font1">{{$article->created_at->format('d/m/Y')}}</span></p>
+                </div>
             </div>
             
             <div class="col-12 col-md-6 bordo">

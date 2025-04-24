@@ -447,6 +447,14 @@ li.footerItem > a.footerItem:hover{
   box-shadow: 0 0 0 0;
 }
 
+.moderatore {
+  position: relative;
+}
+
+.badge {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+}
 
 
 
