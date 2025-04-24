@@ -1,7 +1,7 @@
 <div class="col-12 col-lg-3 col-md-5 m-lg-5 mx-0 my-2 p-1">
     <div class="card card-custom pe-3">
         <div class="card-body d-flex flex-column align-items-start justify-content-evenly overflow-hidden">
-            <h5 class="card-title accento fs-3 mb-2 text-uppercase"> <span class="cardTxt">{{$article->title}}</span></h5>
+            <h5 class="card-title accento fs-3 mb-2 text-uppercase"> <span class="cardTxt text-truncate">{{$article->title}}</span></h5>
             <h6 class="card-subtitle mb-2 accento fs-5">Venditore: <span class="cardTxt">{{$article->user()->get()->first()->name}}</span></h6>
             <p class="card-text accento text-end my-4 fs-6 text-truncate"><span class="cardTxt">{{$article->description}}</span></p>
             <h6 class="card-subtitle accento my-2 fs-5">Prezzo: <span class="cardTxt font1">{{$article->price}}€</span></h6>

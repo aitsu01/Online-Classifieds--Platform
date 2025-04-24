@@ -1,8 +1,10 @@
 <?php
 
-return [
+return [ 'driver' => env('SCOUT_DRIVER', 'tntsearch'),
+    
 
-    'driver' => env('SCOUT_DRIVER', 'tntsearch'),
+
+   
     /*
     |--------------------------------------------------------------------------
     | Default Search Engine
