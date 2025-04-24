@@ -24,6 +24,7 @@
       </div>
     </div>
 
+    @auth
     @if (Auth::user()->is_revisor == false)
 
      <div class="col-4">
@@ -47,6 +48,7 @@
     </div>
     
     @endif
+    @endauth
 
     <div class="col-4">
       
