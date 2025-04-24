@@ -259,7 +259,7 @@ li.footerItem > a.footerItem:hover{
   background-position: top left;
   transition: 1s;
 
-  height: 56vh; /* Assicura che abbiano tutte la stessa altezza */
+  height: 75vh; /* Assicura che abbiano tutte la stessa altezza */
   text-overflow: clip;
  
 }
@@ -447,6 +447,14 @@ li.footerItem > a.footerItem:hover{
   box-shadow: 0 0 0 0;
 }
 
+.moderatore {
+  position: relative;
+}
+
+.badge {
+  background-color: var(--color-accent);
+  color: var(--color-secondary);
+}
 
 
 

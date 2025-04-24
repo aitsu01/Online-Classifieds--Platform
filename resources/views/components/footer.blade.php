@@ -1,4 +1,4 @@
-<footer class="bg-navbar container-fluid py-3">
+<footer class="bg-navbar container-fluid py-3 mt-5">
 
   <div class="row justify-content-evenly">
     

@@ -1,12 +1,12 @@
 <x-layout>
     
     <div class="row my-5">
-        <div class="col-12">
+        <div class="col-12 mt-5">
             <h2 class="text-center mt-5 titolo font1 fw-bold">Dashboard del moderatore</h2>
         </div>
         @if (session()->has('message'))
         <div>
-            <div class="col-5 text-center shadow rounded alert alert-success">
+            <div class="col-12 text-center shadow rounded alert alert-success">
                 {{session('message')}}
             </div>
         </div>
@@ -41,18 +41,18 @@
                 <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button class="btn btn-danger py-2 px-5 fw-bold">Accetta</button>
+                    <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
                 </form>
             </div>
         </div>
     </div>
     @else
     <div class="row justify-content-center align-items-center height-custom text">
-        <div class="col-12">
+        <div class="col-12 ps-5">
             <h1 class="fst-italic display-4">
                 Nessun articolo da revisionare
             </h1>
-            <a href="{{route('homepage')}}" class="mt-5 btn btn-success">Torna alla homepage</a>
+            <a href="{{route('homepage')}}" class="mt-5 btn btn-custom1">Torna alla homepage</a>
         </div>
     </div>
     @endif
