@@ -61,7 +61,7 @@
                  <li><a class="dropdown-item moderatore" href="{{ route('revisor.index') }}">Dashboard moderatore
                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">{{\App\Models\Article::toBeRevisedCount()}}</span></a></li>
                   @else
-                  <li><a class="dropdown-item" href="{{route('become.revisor')}}">Diventa moderatore</a></li>
+                  <li><a class="dropdown-item" href="{{ route('revisor.request') }}">Diventa moderatore</a></li>
                  @endif 
               <form action="{{route('logout')}}" method="POST" id="logout">@csrf</form></li>
             </ul>
