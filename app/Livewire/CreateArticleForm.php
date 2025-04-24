@@ -44,7 +44,7 @@ class CreateArticleForm extends Component
             'user_id' => Auth::id()
         ]);
      
-        sleep(2);
+        // sleep(2);
         $this->reset();
 
         

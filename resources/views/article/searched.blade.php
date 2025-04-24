@@ -1,7 +1,7 @@
 <x-layout :title="'Risultati per la ricerca'">
 <div class="row mt-5 align-items-center">
-        <div class="col-12">
-            <h2 class="text-center mt-5 font1 fs-3 fw-bold titolo">Risultati per la ricerca {{$query}}</h2>
+        <div class="col-12 mt-5">
+            <h2 class="text-center mt-5 font1 fw-bold titolo">Risultati per la ricerca {{$query}}</h2>
         </div>
     </div>
     
