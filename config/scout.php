@@ -1,6 +1,8 @@
 <?php
 
-return [
+return [ 'driver' => env('SCOUT_DRIVER', 'tntsearch'),
+    
+
 
     /*
     |--------------------------------------------------------------------------
@@ -16,7 +18,8 @@ return [
     |
     */
 
-    'driver' => env('SCOUT_DRIVER', 'algolia'),
+    'driver' => env('SCOUT_DRIVER', 'tntsearch'),
+
 
     /*
     |--------------------------------------------------------------------------
@@ -112,15 +115,23 @@ return [
     |
     */
 
-    'algolia' => [
-        'id' => env('ALGOLIA_APP_ID', ''),
-        'secret' => env('ALGOLIA_SECRET', ''),
-        'index-settings' => [
-            // 'users' => [
-            //     'searchableAttributes' => ['id', 'name', 'email'],
-            //     'attributesForFaceting'=> ['filterOnly(email)'],
-            // ],
+    'tntsearch' => [
+        'storage' => storage_path(),
+        'fuzziness' => env('TNTSEARCH_FUZZINESS', false),
+        'fuzzy' => [
+            'prefix_length' =>  2,
+            'max_expansions' =>  50,
+            'distance' =>  2,
+            'no_limit' =>  true
         ],
+
+        'asYouType' => false,
+        'searchBoolean' => env('TNTSEARCH_BOOLEAN', false),
+        'maxDocs' => env('TNTSEARCH_MAX_DOCS', 500),
+        
+
+
+        
     ],
 
     /*
