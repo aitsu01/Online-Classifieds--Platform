@@ -1,22 +1,11 @@
 <x-layout :title="'Presto'">
     
-    @if (session()->has('message'))
-    <div class="alert alert-success text-center shadow rounded mt-5">
-        {{session('message')}}
-    </div>
-    @endif
-    
     @if (session()->has('errorMessage'))
     <div class="alert alert-danger text-center shadow rounded mt-5">
         {{session('errorMessage')}}
     </div>
     @endif
     
-    @if (session()->has('message'))
-    <div class="alert alert-success text-center shadow rounded mt-5">
-        {{session('message')}}
-    </div>
-    @endif
     
     @if (session('success'))
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">               
@@ -34,6 +23,12 @@
     @endif
     
     <div class="row align-items-center v70">
+
+        @if (session()->has('message'))
+        <div class="alert alert-success text-center shadow rounded mt-5">
+            {{session('message')}}
+        </div>
+        @endif
         
         <div class="col-12 my-5">
             <h1 class="text-center secondario font1 titolo">Presto</h1>
