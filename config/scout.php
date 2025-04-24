@@ -1,12 +1,8 @@
 <?php
 
-<<<<<<< HEAD
-return [
-=======
 return [ 'driver' => env('SCOUT_DRIVER', 'tntsearch'),
     
 
->>>>>>> cf4fb3f5afb8c2cadaa641862767043a5521f1ad
 
    
     /*

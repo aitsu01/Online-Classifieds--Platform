@@ -113,7 +113,7 @@ a:hover {
     border-radius: 0.3vw;
     overflow: visible;
     position: relative;
-    height: fit-content;
+    height: 7vh;
 }
 
 .searchControl{
@@ -123,12 +123,14 @@ a:hover {
     height: 100%;
     padding: 1.2vw;
     font-size: 1.4vw;
+    width: 20vw;
 }
 
 .searchControl:focus, .navBtn:focus{
     outline: none;
     box-shadow: 0 0 0 0;
     background-color: transparent;
+    border: 0px;
 }
 
 .searchControl:focus::placeholder{
@@ -140,6 +142,8 @@ a:hover {
     font-style: italic;
     font-size: 1.4vw;
 }
+
+
 
 .navBtn{
     background-color: var(--color-accent);
@@ -259,7 +263,7 @@ li.footerItem > a.footerItem:hover{
   background-position: top left;
   transition: 1s;
 
-  height: 75vh; /* Assicura che abbiano tutte la stessa altezza */
+  height: 56vh; /* Assicura che abbiano tutte la stessa altezza */
   text-overflow: clip;
  
 }
@@ -492,14 +496,32 @@ li.footerItem > a.footerItem:hover{
 /* SCHERMO MEDIO */
 @media screen and (max-width: 992px) {    
  .nav-link, .activeNavLink{
-        font-size: 2.8vw;
+        font-size: 2.5vw;
         padding: 1vw;
         display: block;
     }
 
     .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item, .navBtn{
-        font-size: 2.8vw;
+        font-size: 2.3vw;
         width: 15vw;
+    }
+
+    .navBtn {
+      width: fit-content;
+      height: 100%;
+
+      margin: 0;
+    }
+
+    .searchBox{
+      display: flex;
+      justify-content: between;
+      align-items: center;
+      height: fit-content;
+    }
+    
+    .searchControl{
+      height: 100%;
     }
 
     .nav-item.dropdown .dropdown-menu {
@@ -516,6 +538,8 @@ li.footerItem > a.footerItem:hover{
         padding: 0;
     }
 
+    
+
     .pagination > .page-item > .page-link{
 
       font-size: 4vw;
@@ -523,12 +547,12 @@ li.footerItem > a.footerItem:hover{
 
     .footerItem{
   
-      font-size: 3vw;
+      font-size: 2vw;
       
   }
 
   .footerTitle{
-    font-size: 4vw;
+    font-size: 3vw;
 
   }
 
@@ -545,10 +569,18 @@ li.footerItem > a.footerItem:hover{
 /* SCHERMO PICCOLO */
 @media screen and (max-width: 540px){
   .nav-link, .activeNavLink, .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item, .navBtn {
-    font-size: 4vw;
+    font-size: 2.5vw;
   }
 
-  .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item, .navBtn{
+  .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item{
     width: 22vw;
-}
+  }
+
+ .searchBox{
+  height: 5vh;
+ }
+
+  .searchControl{
+    width: 40vw;
+  }
 }

@@ -12,10 +12,10 @@
         <div class="modal-dialog">                    
             <div class="modal-content bg-modal">                        
                 <div class="modal-header d-flex justify-content-center">                            
-                    <h1 class="modal-title fw-bold fs-6 text-center font1" id="exampleModalLabel">Congratulazioni!<h1>                                                       
+                    <h1 class="modal-title fw-bold fs-6 text-center font1" id="exampleModalLabel">Congratulazioni!<h1>                                                      
                 </div>
                 <div class="modal-body text-center">                            
-                    <p class="fs-5 font1">Annuncio creato con successo</p>
+                    <p class="fs-5 font1">{{session('success')}}</p>
                 </div>
             </div>
         </div>
