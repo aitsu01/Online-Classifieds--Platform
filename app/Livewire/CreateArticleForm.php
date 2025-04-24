@@ -44,11 +44,11 @@ class CreateArticleForm extends Component
             'user_id' => Auth::id()
         ]);
      
-        // sleep(2);
+
         $this->reset();
 
         
-        return redirect()->route('homepage', $this->article);
+        return redirect()->route('homepage', $this->article)->with('success', 'Articolo creato con successo');
 
     }
 
