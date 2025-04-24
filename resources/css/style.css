@@ -276,17 +276,12 @@ li.footerItem > a.footerItem:hover{
   background: var(--color-accent);
   color: var(--color-secondary);
   width: fit-content;
+  border-radius: 0.8vw;
 }
 
 .btn-custom:hover {
   background: var(--color-secondary);
   color: var(--color-accent);
-}
-
-.btn-custom:hover {
-  color: var(--color-accent);
-  background-color: var(--color-secondary);
-  border: 1px var(--color-accent) solid;
 }
 
 .btn-custom1{

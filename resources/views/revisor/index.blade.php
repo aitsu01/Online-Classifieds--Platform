@@ -1,8 +1,14 @@
 <x-layout>
     
-    <div class="row my-5">
+    <div class="row mt-5">
         <div class="col-12 mt-5">
-            <h2 class="text-center mt-5 titolo font1 fw-bold">Dashboard del moderatore</h2>
+            <h2 class="text-center my-5 titolo font1 fw-bold">Dashboard del moderatore</h2>
+        </div>
+        <div class="col-12">
+            <form action="{{route('undo')}}" method="POST">
+                @csrf
+                <button class="btn btn-outline-danger py-2 px-5 fw-bold mb-4">Annulla ultima revisione</button>
+            </form>
         </div>
         @if (session()->has('message'))
         <div>

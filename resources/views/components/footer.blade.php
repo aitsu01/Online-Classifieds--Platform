@@ -24,6 +24,8 @@
       </div>
     </div>
 
+    @if (Auth::user()->is_revisor == false)
+
      <div class="col-4">
       
       <div class="row">
@@ -42,7 +44,9 @@
         </div>
 
       </div>
-    </div> 
+    </div>
+    
+    @endif
 
     <div class="col-4">
       
