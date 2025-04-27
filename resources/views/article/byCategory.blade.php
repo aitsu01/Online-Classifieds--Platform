@@ -1,5 +1,10 @@
 
 <x-layout :title="$category->name">
+    <div class="row mt-5">
+        <div class="col-1 mt-5">
+            <a href="{{route('article.index')}}"><i class="bi bi-arrow-left fs-2 fw-bold"></i></a>
+        </div>
+      </div>
 <div class="row mt-5 align-items-center">
         <div class="col-12">
             <h2 class="text-center mt-5 font1 fs-3 fw-bold titolo">Annunci della categoria {{$category->name}}</h2>

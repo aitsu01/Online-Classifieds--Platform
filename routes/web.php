@@ -18,10 +18,11 @@ Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('a
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 Route::post('/undo', [ArticleController::class, 'undoLastAction'])->name('undo');
 
-Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::get('/revisor/form', [RevisorController::class, 'becomeRevisorForm'])->middleware('auth')->name('become.revisor.form');
+Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
-Route::get('/become/revisor', [RevisorController::class, 'revisorRequest'])->name('revisor.request');
+
 
 
 

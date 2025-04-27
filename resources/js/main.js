@@ -57,4 +57,5 @@ searchToggleBtn.addEventListener('click', () => {
 
   menuToggle.addEventListener('click', () => {
     menu.classList.toggle('show');
+    
   });

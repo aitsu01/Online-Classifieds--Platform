@@ -42,8 +42,11 @@
     - per categoria
     - per descrizione
     
-// TO-DO
-- 
+//DONE
+- ho ri-ottimizzato la navbar sia da mobile che da desktop; non è più presa da bootstrap ma creata da zero per essere personalizzabile al massimo; ho aggiunto un hamburger button per la visualizzazione da mobile e la searchbox a scomparsa; ora è tutto responsive!
+- ho installato la libreria di bootstrap-icons (che prima avevamo solo collegato con le CDN) per non creare fastidiosi rallentamenti al caricamento delle icone. 
+PROMEMORIA: la prossima volta che pullate il progetto, per importare anche voi in locale la libreria ricordatevi di lanciare il comando: 
+   $ composer require twbs/bootstrap-icons
 
 
     

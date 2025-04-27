@@ -50,14 +50,14 @@
 
     {{-- HAMBURGER PER MOBILE --}}
   <div class="position-relative">
-    <button class="btnSearch menu-toggle d-md-none accento" id="menu-toggle">☰</button>
+    <button class="btnSearch menu-toggle accento" id="menu-toggle">☰</button>
 
     <ul class="menu" id="menu">
         
       @guest
       
         <li class="nav-item dropdown mx-4 py-1">
-          <a class="nav-link dropdown-toggle fs-6" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ospite</a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ospite</a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item fs-6" href="{{ route('login') }}">Login</a></li>
             <li><a class="dropdown-item fs-6" href="{{ route('register') }}">Registrati</a></li>
@@ -68,7 +68,7 @@
 
       @auth
         <li class="nav-item dropdown mx-4 py-1">
-          <a class="nav-link dropdown-toggle  active fs-6" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
+          <a class="nav-link dropdown-toggle  active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
           
           <ul class="dropdown-menu">
             <li><a class="dropdown-item fs-6" href="{{ route('article.create') }}">Crea annuncio</a></li>
@@ -87,7 +87,7 @@
       @endauth
 
       <li class="nav-item mx-4 py-1">
-        <a class="nav-link @if(Route::current()->getName() == 'article.index') active @endif fs-6" href="{{ route('article.index') }}">Tutti gli annunci</a>
+        <a class="nav-link @if(Route::current()->getName() == 'article.index') active @endif" href="{{ route('article.index') }}">Tutti gli annunci</a>
       </li>
 
     </ul>

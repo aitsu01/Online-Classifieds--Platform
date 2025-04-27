@@ -56,6 +56,9 @@
     color: var(--color-accent);
 }
 
+.searchBox > .nav-link:focus{
+    color: var(--color-secondary);
+}
 .active{
     border-bottom: 1px solid var(--color-accent);
 }
@@ -157,6 +160,10 @@ nav .dropdown-menu {
   font-size: 1.8rem;
 }
 
+.menu-toggle {
+    display: none;
+}
+
 .menu{
     display:flex;
     margin: 0px;
@@ -194,21 +201,20 @@ nav .dropdown-menu {
 
     .menu{
         position: absolute;
-        top: 100%;
+        top: 120%;
         
         padding: 0.5vw;
         display: none;
-        z-index: 999; /* Sta sopra gli altri elementi */
-        
+        z-index: 999;
     }
 
     .menu.show {
         display: block;
-        width: 43vw;
+        width: 47vw;
         right: 0px;
         background-color: var(--color-secondary);
         border-radius: 0.9vw;
-        border: 1px solid var(--color-accent);
+        
     
     }
 
@@ -216,9 +222,19 @@ nav .dropdown-menu {
         font-size: 1vw;
     }
 
+    .menu-toggle{
+        display: block;
+    }
+
     .categoryBtn{
         width: 15vw;
         padding: 3vw;
+    }
+
+    .categoryBtn:hover {
+        background-color: var(--color-accent);
+        /* color: var(--color-accent); */
+        border-right: 0px;
     }
 
     .dropdown-item{
@@ -246,7 +262,7 @@ nav .dropdown-menu {
     
 
     .nav-link{
-    font-size: 3vw;
+    font-size: 4.2vw;
     }
 
     .navbar-brand::after, .activeNavBrand::after {

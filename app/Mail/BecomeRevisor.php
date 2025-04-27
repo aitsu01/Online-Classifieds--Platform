@@ -15,13 +15,15 @@ class BecomeRevisor extends Mailable
     use Queueable, SerializesModels;
 
     public $user;
+    public $userMessage;
 
     /**
      * Create a new message instance.
      */
-    public function __construct(User $user)
+    public function __construct(User $user, string $userMessage)
     {
         $this->user = $user;
+        $this->userMessage = $userMessage;
     }
 
     /**
@@ -41,6 +43,10 @@ class BecomeRevisor extends Mailable
     {
         return new Content(
             view: 'mail.become-revisor',
+            with: [
+                'user' => $this->user,
+                'userMessage' => $this->userMessage
+            ]
         );
     }
 

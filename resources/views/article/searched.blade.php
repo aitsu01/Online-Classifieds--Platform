@@ -1,4 +1,9 @@
 <x-layout :title="'Risultati per la ricerca'">
+    <div class="row mt-5">
+        <div class="col-1 mt-5">
+            <a href="{{route('homepage')}}"><i class="bi bi-arrow-left fs-2 fw-bold"></i></a>
+        </div>
+      </div>
 <div class="row mt-5 align-items-center">
         <div class="col-12 mt-5">
             <h2 class="text-center mt-5 font1 fw-bold titolo">Risultati per la ricerca {{$query}}</h2>

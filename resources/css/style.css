@@ -15,6 +15,7 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--color-secondary);
 }
 
 a:hover {
@@ -60,49 +61,63 @@ ul{
 }
 
 /* STILE FOOTER */
+
+.bgFooter{
+  background-color: var(--color-secondary);
+}
+
 .footerLink{
     color: var(--color-primary);
     text-decoration: none;
-    padding: 0.5vw;
 }
 
-.btn{
-  border: 0px;
+.footerLinkDesktop{
+  padding-right: 3vw;
 }
+.footerLink:hover{
+  color: var(--color-accent);
+}
+
+.footerItem{
+  color: var(--color-primary);
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.5vw;
+  font-weight: 300;
+  width: fit-content;
+  height: fit-content;
+}
+.footerTitle{
+  color: var(--color-accent);
+  font-size: 2vw;
+  padding-bottom: 0.2vw;
+  margin: 0;
+  padding-bottom: 1vw;
+}
+
+
+
+li.footerItem > a.footerItem {
+  padding-top: 0.4vw;
+  text-decoration: underline;
+  text-underline-offset: 0.4vw;
+}
+
+li.footerItem > a.footerItem:hover{
+  color: var(--color-accent);
+}
+
 .btn:focus, .btn:active{
   border: 0px;
   box-shadow: none;
   outline: none;
 }
-.footerLink:hover{
-    color: var(--color-accent);
-}
 
-.footerItem{
-    color: var(--color-primary);
-    text-decoration: none;
-    list-style: none;
-    font-size: 1vw;
-    font-weight: 300;
-    width: fit-content;
-    height: fit-content;
-}
-li.footerItem > a.footerItem {
-    padding-top: 0.4vw;
-    text-decoration: underline;
-    text-underline-offset: 0.4vw;
-}
 
-li.footerItem > a.footerItem:hover{
-    color: var(--color-accent);
-}
 
-.footerTitle{
-    color: var(--color-accent);
-    font-size: 1.6vw;
-    padding-bottom: 0.2vw;
-    margin: 0;
-}
+
+
+
 
 /* STILE PAGINA DETTAGLIO */
 .carosello {
@@ -120,7 +135,7 @@ li.footerItem > a.footerItem:hover{
   background-position: top left;
   transition: 1s;
 
-  height: 56vh; /* Assicura che abbiano tutte la stessa altezza */
+  height: 59vh; /* Assicura che abbiano tutte la stessa altezza */
   text-overflow: clip;
  
 }
@@ -281,9 +296,8 @@ li.footerItem > a.footerItem:hover{
 }
 .pagination > .page-item > .page-link{
   color: var(--color-secondary);
-  border: 2px solid var(--color-secondary);
-  border-radius: 100%;
-  font-size: 2vw;
+  border: 0px;
+  font-size: 1.6vw;
   font-family: "Cinzel", serif;
   font-weight: 600;
   margin: 0.5vw;
@@ -344,114 +358,12 @@ li.footerItem > a.footerItem:hover{
 /* MEDIA QUERIES NAVBAR */
 
 
-/* ===================== RESPONSIVE ===================== */
-/* @media (max-width: 768px) {
-  .navbar-brand::after, 
-  .activeNavBrand::after {
-      font-size: 4vw;
-      width: 20vw;
-      padding: 1vw;
-  }
 
-  .navLink, 
-  .activeNavLink {
-      font-size: 4vw;
-      padding: 1vw 2vw;
-  }
 
-  .searchControl {
-      width: 50vw;
-      font-size: 4vw;
-      padding: 2vw;
-  }
-
-  .navBtn, 
-  form > .navBtn {
-      font-size: 4vw;
-      padding: 1vw;
-  }
-
-  nav .dropdown-item {
-      font-size: 4vw;
-  }
-}
-
-@media (max-width: 480px) {
-  .navbar-brand::after, 
-  .activeNavBrand::after {
-      font-size: 5vw;
-      width: 30vw;
-      padding: 1.5vw;
-  }
-
-  .navLink, 
-  .activeNavLink {
-      font-size: 5vw;
-      padding: 1.5vw 3vw;
-  }
-
-  .searchControl {
-      width: 70vw;
-      font-size: 5vw;
-      padding: 3vw;
-  }
-
-  .navBtn, 
-  form > .navBtn {
-      font-size: 5vw;
-      padding: 2vw;
-  }
-
-  nav .dropdown-item {
-      font-size: 5vw;
-  }
-} */
 
 /* SCHERMO MEDIO */
-/* @media screen and (max-width: 992px) {    
- .nav-link, .activeNavLink{
-        font-size: 2.5vw;
-        padding: 1vw;
-        display: block;
-    }
-
-    .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item, .navBtn{
-        font-size: 2.3vw;
-        width: 15vw;
-    }
-
-    .navBtn {
-      width: fit-content;
-      height: 100%;
-
-      margin: 0;
-    }
-
-    .searchBox{
-      display: flex;
-      justify-content: between;
-      align-items: center;
-      height: fit-content;
-    }
-    
-    .searchControl{
-      height: 100%;
-    }
-
-    .nav-item.dropdown .dropdown-menu {
-        position: absolute;
-        top: 100%; 
-        left: 0;
-        right: 0;
-        z-index: 1050; 
-        box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-    }
-
-    .searchControl::placeholder{
-        font-size: 1.8vw;
-        padding: 0;
-    }
-
+ @media screen and (max-width: 992px) {    
+ 
     
 
     .pagination > .page-item > .page-link{
@@ -475,26 +387,27 @@ li.footerItem > a.footerItem:hover{
     border: 0;
     margin: 0;
     background-color: transparent;
+  } 
     
-  }
+    .footerLinkDesktop{
+      padding-right: 0px;
+    }
 
-} */
+  
+
+} 
 
 /* SCHERMO PICCOLO */
-/* @media screen and (max-width: 540px){
-  .nav-link, .activeNavLink, .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item, .navBtn {
+ @media screen and (max-width: 540px){
+ 
+  .footerItem{
+  
     font-size: 2.5vw;
-  }
+    
+}
 
-  .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item{
-    width: 22vw;
+.footerTitle{
+  font-size: 4vw;
+  width: fit-content;
   }
-
- .searchBox{
-  height: 5vh;
  }
-
-  .searchControl{
-    width: 40vw;
-  }
-} */
