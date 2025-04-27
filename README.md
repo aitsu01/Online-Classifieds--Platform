@@ -22,7 +22,7 @@
 - **CRUD** con **Livewire**
     -pulsante "**crea articolo**" nella home e nella navbar
 - visualizzazione messaggi di conferma per UX
- 
+
 - homepage con **articoli più recenti**
 - pagina dettaglio articoli con **carosello** immagini.
 - esplorazione articoli per categoria:
@@ -41,6 +41,10 @@
     - per titolo
     - per categoria
     - per descrizione
+    
+// TO-DO
+- 
+
 
     
 
