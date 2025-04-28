@@ -22,4 +22,10 @@ return [
     'arredamento esterno'=> 'Arredamento esterno',
     'animali'=> 'Animali',
     'strumenti musicali'=> 'Strumenti musicali',
+    'contactUs'=> 'Contattaci',
+    'address'=> 'Indirizzo',
+    'phone'=> 'Telefono',
+    'workWithUs'=> 'Lavora con noi',
+    'becomeRevisor'=> 'Diventa moderatore',
+    'followUs'=> 'Seguici',
 ];
