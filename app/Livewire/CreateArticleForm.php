@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Auth;
 class CreateArticleForm extends Component
 {
     use WithFileUploads;
+
     #[Validate('required|min:3')]
     public $title;
     #[Validate('required|min:8')]
@@ -26,7 +27,8 @@ class CreateArticleForm extends Component
     public $validatedData;
 
     public $article;
-    public $image= [];
+
+    public $images= [];
     public $temporary_images;
     
 
@@ -42,7 +44,7 @@ class CreateArticleForm extends Component
         $this->description = '';
         $this->price = '';
         $this->category = '';
-        $this->image = [];
+        $this->images = [];
         
         
     }
@@ -61,8 +63,9 @@ class CreateArticleForm extends Component
             'user_id' => Auth::id()
 
         ]);
-        if (count($this->image) > 0) {
-            foreach ($this->image as $image) {
+        
+        if (count($this->images) > 0) {
+            foreach ($this->images as $image) {
                 $this->article->images()->create([
                     'path' => $image->store('images', 'public')
                 ]);
@@ -91,18 +94,18 @@ class CreateArticleForm extends Component
     }
 
     public function updatedTemporaryImages(){
-        if ($this->validate(['temporary_images.*' => 'image|max:1024',
+        if ($this->validate(['temporary_images . *' => 'image|max:1024',
         'temporary_images'=>'max:6'])) {
             foreach ($this->temporary_images as $image) {
-                $this->image[] = $image;
+                $this->images[] = $image;
             }
             
         }
     }
 
     public function removeImage($key){
-        if (in_array($key, array_keys($this->image))) {
-            unset($this->image[$key]);
+        if (in_array($key, array_keys($this->images))) {
+            unset($this->images[$key]);
         }
         
     }

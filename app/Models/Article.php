@@ -17,6 +17,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Article extends Model
 {
     use Searchable;
+    
     use HasFactory;
     protected $fillable = [
         'title',
