@@ -8,6 +8,8 @@ use App\Http\Controllers\RevisorController;
 
 
 Route::get('/', [PublicController::class, 'index'])->name('homepage');
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
 Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');

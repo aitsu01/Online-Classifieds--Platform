@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'lastAds'=> 'Ultimi annunci',
+    'adPublish'=> 'Pubblica un annuncio',
+    'noAds'=> 'Non sono ancora presenti annunci',
+    'categories'=> 'Categorie',
+    'allAds'=> 'Tutti gli annunci',
+    'guest'=> 'Ospite',
+    'signIn'=> 'Accedi',
+    'signUp'=> 'Registrati',
+    'logout'=> 'Disconnetti',
+    'createAd'=> 'Pubblica un annuncio',
+    'revisorDashboard'=> 'Dashboard moderatore',
+    'abbigliamento'=> 'Abbigliamento',
+    'moto'=> 'Moto',
+    'auto'=> 'Auto',
+    'bricolage'=> 'Bricolage',
+    'elettronica'=> 'Elettronica',
+    'sport'=> 'Sport',
+    'arredamento interno'=> 'Arredamento interno',
+    'arredamento esterno'=> 'Arredamento esterno',
+    'animali'=> 'Animali',
+    'strumenti musicali'=> 'Strumenti musicali',
+];

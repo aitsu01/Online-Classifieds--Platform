@@ -1,0 +1,25 @@
+<?php
+
+return [
+    'lastAds'=> 'Last ads',
+    'adPublish'=> 'Publish an ad',
+    'noAds'=> 'No ads',
+    'categories'=> 'Categories',
+    'allAds'=> 'All ads',
+    'guest'=> 'Guest',
+    'signIn'=> 'Sign in',
+    'signUp'=> 'Sign up',
+    'logout'=> 'Logout',
+    'createAd'=> 'Create an ad',
+    'revisorDashboard'=> 'Revisor dashboard',
+    'abbigliamento'=> 'Clothing',
+    'moto'=> 'Motorcycle',
+    'auto'=> 'Cars',
+    'bricolage'=> 'Bricolage',
+    'elettronica'=> 'Electronics',
+    'sport'=> 'Sport',
+    'arredamento interno'=> 'Interior decoration',
+    'arredamento esterno'=> 'Exterior decoration',
+    'animali'=> 'Animals',
+    'strumenti musicali'=> 'Musical instruments',
+];
