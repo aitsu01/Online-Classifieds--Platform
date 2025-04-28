@@ -52,10 +52,31 @@ searchToggleBtn.addEventListener('click', () => {
 
 
 
+
+
+
   const menuToggle = document.getElementById('menu-toggle');
   const menu = document.getElementById('menu');
 
   menuToggle.addEventListener('click', () => {
     menu.classList.toggle('show');
     
+  });
+
+
+
+  Livewire.on('article-created', (message) => {
+    const modalElement = document.getElementById('exampleModal');
+    const successMessageElement = document.getElementById('successMessage');
+  
+    if (modalElement && successMessageElement) {
+        successMessageElement.textContent = message || 'Articolo creato con successo!';
+  
+        const myModal = new bootstrap.Modal(modalElement);
+        myModal.show();
+  
+        setTimeout(() => {
+            myModal.hide();
+        }, 2000);
+    }
   });

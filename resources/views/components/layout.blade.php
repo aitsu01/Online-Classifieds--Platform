@@ -30,11 +30,11 @@
     <script>
         window.sessionSuccess = true;
     </script>
-@else
+    @else
     <script>
         window.sessionSuccess = false;
     </script>
-@endif
+    @endif
 </body>
 </html>
 

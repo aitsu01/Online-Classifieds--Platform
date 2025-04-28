@@ -26,22 +26,24 @@
     </div>
     @if ($article_to_check)
     <div class="row justify-content-center pt-5">
-        <div class="col-md-8">
+        <div class="col-md-6">
             <div class="row justify-content-center">
-                @for ($i = 0; $i < 6; $i++)
-                <div class="col-6 col-md-4 mb-4 text-center">
-                    <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
+                @if ($article_to_check->images)
+                @foreach ($article_to_check->images as $image)
+                <div class="col-4 col-md-3 mb-4 mx-2 p-0">
+                    <img src="{{Storage::url($image->path)}}" class="img-fluid w-75 rounded shadow" alt="immagine inserita dall'utente">
                 </div>
-                @endfor
+                @endforeach
+                @endif
             </div>
         </div>
-        <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
+        <div class="col-md-5 col-8 p-0 d-flex flex-column justify-content-between">
             <div>
-                <h1>{{$article_to_check->title}}</h1>
-                <h3>{{__('ui.seller')}}: {{$article_to_check->user->name}}</h3>
-                <h4>{{$article_to_check->price}}</h4>
-                <h4 class="fst-italic text-muted">#{{$article_to_check->category->name}}</h4>
-                <p class="h6">{{$article_to_check->description}}</p>
+                <h2 class="fs-5"><span class="form-label fs-4">{{__('ui.title')}}</span> {{$article_to_check->title}}</h2>
+                <h3 class="fs-5"> <span class="form-label fs-4">{{__('ui.seller')}}:</span> {{$article_to_check->user->name}}</h3>
+                <h4 class="fs-5"> <span class="form-label fs-4">{{__('ui.price')}}:</span> €<span class="font1">{{$article_to_check->price}}</span></h4>
+                <h4 class="fs-5"><span class="form-label fs-4">{{__('ui.category')}}:</span> {{$article_to_check->category->name}}</h4>
+                <p class="fs-5"><span class="form-label fs-4">{{__('ui.description')}}</span> {{$article_to_check->description}}</p>
             </div>
             
             <div class="d-flex pb-4 justify-content-around">
