@@ -9,7 +9,7 @@
 
     <div class="searchBox d-flex align-items-center justify-content-evenly">
 
-    <a class="nav-link dropdown-toggle categoryBtn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Categorie</a>
+    <a class="nav-link dropdown-toggle categoryBtn" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{__('ui.categories')}}</a>
 
     {{-- form di ricerca --}}
     <form class="d-flex searchForm p-0 m-0" role="search" action="{{ route('article.search') }}" method="GET">
@@ -29,7 +29,7 @@
     <ul class="dropdown-menu">
       @foreach ($categories as $category)
         <li>
-          <a class="dropdown-item text-capitalize fs-6" href="{{ route('byCategory', ['category' => $category]) }}">{{ $category->name }}</a>
+          <a class="dropdown-item text-capitalize fs-6" href="{{ route('byCategory', ['category' => $category]) }}">{{ __("ui.$category->name") }}</a>
         </li>
 
         @if (!$loop->last)
@@ -57,11 +57,18 @@
       @guest
       
         <li class="nav-item dropdown mx-4 py-1">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ospite</a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{__('ui.guest')}}</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item fs-6" href="{{ route('login') }}">Login</a></li>
-            <li><a class="dropdown-item fs-6" href="{{ route('register') }}">Registrati</a></li>
+            <li><a class="dropdown-item fs-6" href="{{ route('login') }}">{{__('ui.signIn')}}</a></li>
+            <li><a class="dropdown-item fs-6" href="{{ route('register') }}">{{__('ui.signUp')}}</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <x-_locale lang='it'/>
+              <x-_locale lang='en'/>
+              <x-_locale lang='es'/>
+            </li>
           </ul>
+          
         </li>
 
       @endguest
@@ -71,23 +78,30 @@
           <a class="nav-link dropdown-toggle  active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">{{ Auth::user()->name }}</a>
           
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item fs-6" href="{{ route('article.create') }}">Crea annuncio</a></li>
+            <li><a class="dropdown-item fs-6" href="{{ route('article.create') }}">{{__('ui.adPublish')}}</a></li>
             <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item fs-6" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a></li>
+            <li><a class="dropdown-item fs-6" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit();">{{__('ui.logout')}}</a></li>
             
             @if (Auth::user()->is_revisor)
-              <li class="position-relative"><a class="dropdown-item fs-6" href="{{ route('revisor.index') }}">Dashboard moderatore<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">{{\App\Models\Article::toBeRevisedCount()}}</span></a></li>
+              <li class="position-relative"><a class="dropdown-item fs-6" href="{{ route('revisor.index') }}">{{__('ui.revisorDashboard')}}<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">{{\App\Models\Article::toBeRevisedCount()}}</span></a></li>
             @endif
           
             <form action="{{ route('logout') }}" method="POST" id="logout" class="d-none">@csrf</form>
+            
+            <li><hr class="dropdown-divider"></li>
+            <li>
+              <x-_locale lang='it'/>
+              <x-_locale lang='en'/>
+              <x-_locale lang='es'/>
+            </li>
 
           </ul>
         </li>
+        @endauth
 
-      @endauth
 
       <li class="nav-item mx-4 py-1">
-        <a class="nav-link @if(Route::current()->getName() == 'article.index') active @endif" href="{{ route('article.index') }}">Tutti gli annunci</a>
+        <a class="nav-link @if(Route::current()->getName() == 'article.index') active @endif" href="{{ route('article.index') }}">{{__('ui.allAds')}}</a>
       </li>
 
     </ul>

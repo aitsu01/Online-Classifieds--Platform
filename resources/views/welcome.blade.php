@@ -38,11 +38,11 @@
     
     <div class="row mt-5 justify-content-evenly">
         <div class="col-6">
-            <h2 class="text-center font1 fs-2 fw-bold">Ultimi annunci</h2>
+            <h2 class="text-center font1 fs-2 fw-bold">{{__('ui.lastAds')}}</h2>
         </div>
         
         <div class="col-6 col-md-3 text-center d-flex align-items-center">
-            <a class="btn btn-custom" href="{{route('article.create')}}">Pubblica un annuncio</a>
+            <a class="btn btn-custom" href="{{route('article.create')}}">{{__('ui.adPublish')}}</a>
         </div>
     </div>
     
@@ -61,7 +61,7 @@
         <x-card :article="$article"/>
         @empty
         
-        <h3 class="text-center">Non sono ancora presenti articoli</h3>
+        <h3 class="text-center">{{__('ui.noAds')}}</h3>
         
         @endforelse
     </div>
