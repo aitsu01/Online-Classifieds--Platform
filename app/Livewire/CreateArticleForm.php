@@ -3,13 +3,16 @@
 namespace App\Livewire;
 
 use App\Models\Article;
+use Livewire\WithFileUploads;
 use Livewire\Component;
 use App\Models\Category;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
 
+
 class CreateArticleForm extends Component
 {
+    use WithFileUploads;
     #[Validate('required|min:3')]
     public $title;
     #[Validate('required|min:8')]
@@ -17,16 +20,30 @@ class CreateArticleForm extends Component
     #[Validate('required|numeric|min:1')]
     public $price;
     #[Validate('required')]
+
     public $category;
     public $categories;
     public $validatedData;
 
     public $article;
+    public $image= [];
+    public $temporary_images;
+    
 
     public function mount(){
 
         $categories = Category::all();
         $this->categories = $categories;
+        
+    }
+
+    protected function cleanForm(){
+        $this->title = '';
+        $this->description = '';
+        $this->price = '';
+        $this->category = '';
+        $this->image = [];
+        
         
     }
 
@@ -42,13 +59,21 @@ class CreateArticleForm extends Component
             'category_id' => $this->category,
 
             'user_id' => Auth::id()
+
         ]);
+        if (count($this->image) > 0) {
+            foreach ($this->image as $image) {
+                $this->article->images()->create([
+                    'path' => $image->store('images', 'public')
+                ]);
+            }
+            
+        }
      
 
-        $this->reset();
-
         
-        return redirect()->route('homepage', $this->article)->with('success', 'Articolo creato con successo');
+        session()->flash('success', 'Articolo creato con successo');
+        $this->cleanForm();
 
     }
 
@@ -65,8 +90,33 @@ class CreateArticleForm extends Component
         ];
     }
 
+    public function updatedTemporaryImages(){
+        if ($this->validate(['temporary_images.*' => 'image|max:1024',
+        'temporary_images'=>'max:6'])) {
+            foreach ($this->temporary_images as $image) {
+                $this->image[] = $image;
+            }
+            
+        }
+    }
+
+    public function removeImage($key){
+        if (in_array($key, array_keys($this->image))) {
+            unset($this->image[$key]);
+        }
+        
+    }
+
+
+
     public function render()
     {
         return view('livewire.create-article-form');
     }
+
+
+
+    
+
+
 }
