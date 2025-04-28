@@ -2,12 +2,12 @@
     <div class="card card-custom pe-3">
         <div class="card-body d-flex flex-column align-items-start justify-content-evenly overflow-hidden">
             <h5 class="card-title accento fs-3 mb-2 text-uppercase"> <span class="cardTxt text-truncate">{{$article->title}}</span></h5>
-            <h6 class="card-subtitle mb-2 accento fs-5">Venditore: <span class="cardTxt">{{$article->user()->get()->first()->name}}</span></h6>
+            <h6 class="card-subtitle mb-2 accento fs-5">{{__('ui.seller')}}: <span class="cardTxt">{{$article->user()->get()->first()->name}}</span></h6>
             <p class="card-text accento text-end my-4 fs-6 text-truncate"><span class="cardTxt">{{$article->description}}</span></p>
-            <h6 class="card-subtitle accento my-2 fs-5">Prezzo: <span class="cardTxt font1">{{$article->price}}€</span></h6>
-            <a href="{{ route('byCategory', ['category' => $article->category]) }}"><h6 class="card-subtitle mb-2 accento fs-5">Categoria: <span class="cardLink">{{$article->category->name }}</span> </h6> </a>
-            <h6 class="card-subtitle accento my-2 fs-5">Pubblicato il: <span class="cardTxt font1">{{$article->created_at->format('d/m/Y')}}</span></h6>
-            <a class="btn-custom p-1 my-2 fw-bold fs-6" href="{{ route('article.show', compact('article')) }}">Annuncio completo</a>   
+            <h6 class="card-subtitle accento my-2 fs-5">{{__('ui.price')}}: <span class="cardTxt font1">{{$article->price}}€</span></h6>
+            <a href="{{ route('byCategory', ['category' => $article->category]) }}"><h6 class="card-subtitle mb-2 accento fs-5">{{__('ui.category')}}: <span class="cardLink">{{__("ui." . $article->category->name)}}</span> </h6> </a>
+            <h6 class="card-subtitle accento my-2 fs-5">{{__('ui.publishedOn')}}: <span class="cardTxt font1">{{$article->created_at->format('d/m/Y')}}</span></h6>
+            <a class="btn-custom p-1 my-2 fw-bold fs-6" href="{{ route('article.show', compact('article')) }}">{{__('ui.adDetails')}}</a>   
         </div>
     </div>
 </div>

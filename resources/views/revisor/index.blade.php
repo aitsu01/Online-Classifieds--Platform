@@ -8,12 +8,12 @@
     
     <div class="row mt-5">
         <div class="col-12 mt-5">
-            <h2 class="text-center my-5 titolo font1 fw-bold">Dashboard del moderatore</h2>
+            <h2 class="text-center my-5 titolo font1 fw-bold">{{__('ui.revisorDashboard')}}</h2>
         </div>
         <div class="col-12">
             <form action="{{route('undo')}}" method="POST">
                 @csrf
-                <button class="btn btn-outline-danger py-2 px-5 fw-bold mb-4">Annulla ultima revisione</button>
+                <button class="btn btn-outline-danger py-2 px-5 fw-bold mb-4">{{__('ui.undoRevision')}}</button>
             </form>
         </div>
         @if (session()->has('message'))
@@ -38,7 +38,7 @@
         <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
             <div>
                 <h1>{{$article_to_check->title}}</h1>
-                <h3>Autore: {{$article_to_check->user->name}}</h3>
+                <h3>{{__('ui.seller')}}: {{$article_to_check->user->name}}</h3>
                 <h4>{{$article_to_check->price}}</h4>
                 <h4 class="fst-italic text-muted">#{{$article_to_check->category->name}}</h4>
                 <p class="h6">{{$article_to_check->description}}</p>
@@ -48,23 +48,20 @@
                 <form action="{{route('reject', ['article' => $article_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button class="btn btn-danger py-2 px-5 fw-bold">Rifiuta</button>
+                    <button class="btn btn-danger py-2 px-5 fw-bold">{{__('ui.reject')}}</button>
                 </form>
                 <form action="{{route('accept', ['article' => $article_to_check])}}" method="POST">
                     @csrf
                     @method('PATCH')
-                    <button class="btn btn-success py-2 px-5 fw-bold">Accetta</button>
+                    <button class="btn btn-success py-2 px-5 fw-bold">{{__('ui.accept')}}</button>
                 </form>
             </div>
         </div>
     </div>
     @else
     <div class="row justify-content-center align-items-center height-custom text">
-        <div class="col-12 ps-5">
-            <h1 class="fst-italic display-4">
-                Nessun articolo da revisionare
-            </h1>
-            <a href="{{route('homepage')}}" class="mt-5 btn btn-custom1">Torna alla homepage</a>
+        <div class="col-12 mx-auto">
+            <h1 class="font1 fw-bold fs-1 text-center">{{__('ui.noAdsToRevise')}}</h1>
         </div>
     </div>
     @endif
