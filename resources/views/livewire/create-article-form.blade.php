@@ -1,5 +1,5 @@
 <div>
-
+    
     
     <div class="row justify-content-around">
         
@@ -15,7 +15,7 @@
                     @enderror
                     
                 </div>
-
+                
                 <div class="mb-3">
                     <input type="file" wire:model="temporary_images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img/" >
                     @error('temporary_images.*')
@@ -24,25 +24,25 @@
                     @error('temporary_images')
                     <p class="fst-italic text-danger">{{ $message }}</p>
                     @enderror
-                </div>
-                @if (!empty($images))
-                  <div class="row">
-                    <div class="col-12">
-                        <p> foto preview: </p>
-                    <div class="row border border-4 border-success rounded shadow py-4">
-                        @foreach ($images as $key => $image)
-                        <div class="col-4 d-flex flex-column align-items-center my-3">
+
+                    @if (!empty($images))
+                    <div class="row">
+                        <div class="col-12 d-flex flex-column align-items-center">
+                            
+                            @foreach ($images as $key => $image)
+                            
                             <div class="img-preview mx-auto shadow rounded" style="background-image: url({{$image->temporaryUrl()}});"></div>
+                            
+                            <button type="button" class="btn btn-custom1" wire:click="removeImage({{$key}})">X</button>
+                            @endforeach
+                            
                         </div>
-                        <button type="button" class="btn mt-1 btn-danger" wire:click="removeImage({{$key}})">Rimuovi</button>
-                        @endforeach
                     </div>
-                    </div>
-                  </div>
+                </div>
                 @endif
                 
-
-                    
+                
+                
                 
                 
                 <div class="mb-3">
@@ -131,4 +131,6 @@
                 
             </div>
         </div>
+        
+    </div>
         

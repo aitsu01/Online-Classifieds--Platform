@@ -326,6 +326,18 @@ li.footerItem > a.footerItem:hover{
   color: var(--color-secondary);
 }
 
+.img-preview {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 5vh;
+  height: 5vh;
+ }
+
+ .img-custom {
+  height: 15vh;
+ }
+
 
 
 
@@ -413,10 +425,3 @@ li.footerItem > a.footerItem:hover{
  }
 
 
- .img-preview {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height :120px;
-  width :120px;
- }

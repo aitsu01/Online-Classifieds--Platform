@@ -4,14 +4,14 @@
             <a href="{{ url()->previous() }}"><i class="bi bi-arrow-left fs-2 fw-bold"></i></a>
         </div>
     </div>
-        
-        
-        <div class="row mb-5">
-            <div class="col-12 mt-5">
-                <h1 class="text-center titolo fs-1 font1 my-5">{{$article->title}}</h1>
-            </div>
+    
+    
+    <div class="row mb-5">
+        <div class="col-12 mt-5">
+            <h1 class="text-center titolo fs-1 font1 my-5">{{$article->title}}</h1>
         </div>
-
+    </div>
+    
     <div class="bordoTotale w-md-75 mb-5 ">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 d-flex flex-column align-items-start justify-content-evenly bordo w-md-100 h-md-100">
@@ -30,78 +30,28 @@
             
             <div class="col-12 col-md-6 bordo">
                 <!-- Swiper -->
-                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2 rounded">
+                <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                        </div>
+                      @foreach ($article->images as $key => $image)
+                      <div class="swiper-slide">
+                        <img src="{{Storage::url($image->path)}}" />
+                      </div>
+                      @endforeach
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
-                <div thumbsSlider="" class="swiper mySwiper">
+                    <div class="swiper-button-next accento"></div>
+                    <div class="swiper-button-prev accento"></div>
+                  </div>
+                  <div thumbsSlider="" class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-                        </div>
-                        <div class="swiper-slide">
-                            <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
-                        </div>
+                      @foreach ($article->images as $key => $image)
+                      <div class="swiper-slide">
+                        <img src="{{Storage::url($image->path)}}" />
+                      </div>
+                      @endforeach
                     </div>
-                </div>
+                  </div>
             </div>
         </div>
     </div>  
-
+    
 </x-layout>
