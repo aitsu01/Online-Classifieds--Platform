@@ -13,7 +13,7 @@
 
     {{-- form di ricerca --}}
     <form class="d-flex searchForm p-0 m-0" role="search" action="{{ route('article.search') }}" method="GET">
-      <input class="form-control searchControl m-0 h-100 d-none d-md-block" id="searchBar" name="query" type="search" placeholder="Cerca su Presto..." aria-label="Search">
+      <input class="form-control searchControl m-0 h-100 d-none d-md-block" id="searchBar" name="query" type="search" placeholder="{{__('ui.search')}}" aria-label="Search">
       <button class="btnSearch d-none d-md-block" type="submit">
         <i class="bi bi-search h-100 p-0 me-2"></i>
       </button>
