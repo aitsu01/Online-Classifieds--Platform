@@ -76,7 +76,7 @@
             <li><a class="dropdown-item fs-6" href="#" onclick="event.preventDefault(); document.querySelector('#logout').submit();">Logout</a></li>
             
             @if (Auth::user()->is_revisor)
-              <li><a class="dropdown-item fs-6" href="{{ route('revisor.index') }}">Dashboard moderatore</a></li>
+              <li class="position-relative"><a class="dropdown-item fs-6" href="{{ route('revisor.index') }}">Dashboard moderatore<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill">{{\App\Models\Article::toBeRevisedCount()}}</span></a></li>
             @endif
           
             <form action="{{ route('logout') }}" method="POST" id="logout" class="d-none">@csrf</form>
