@@ -1,10 +1,14 @@
-<x-layout :title="$article->title">>
-    
+<x-layout :title="$article->title">
+    <div class="row mt-5">
+        <div class="col-1 mt-5">
+            <a href="{{ url()->previous() }}"><i class="bi bi-arrow-left fs-2 fw-bold"></i></a>
+        </div>
+    </div>
         
         
-        <div class="row my-5">
+        <div class="row mb-5">
             <div class="col-12 mt-5">
-                <h1 class="text-center titolo fs-2 font1 my-5">{{$article->title}}</h1>
+                <h1 class="text-center titolo fs-1 font1 my-5">{{$article->title}}</h1>
             </div>
         </div>
 

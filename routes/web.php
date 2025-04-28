@@ -8,6 +8,8 @@ use App\Http\Controllers\RevisorController;
 
 
 Route::get('/', [PublicController::class, 'index'])->name('homepage');
+Route::post('/lingua/{lang}', [PublicController::class, 'setLanguage'])->name('setLocale');
+
 Route::get('/create/article', [ArticleController::class, 'create'])->name('article.create');
 Route::get('/article/index', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/show/{article}', [ArticleController::class, 'show'])->name('article.show');
@@ -18,10 +20,11 @@ Route::patch('/accept/{article}', [RevisorController::class, 'accept'])->name('a
 Route::patch('/reject/{article}', [RevisorController::class, 'reject'])->name('reject');
 Route::post('/undo', [ArticleController::class, 'undoLastAction'])->name('undo');
 
-Route::get('/revisor/request', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('become.revisor');
+Route::get('/revisor/form', [RevisorController::class, 'becomeRevisorForm'])->middleware('auth')->name('become.revisor.form');
+Route::post('/revisor/request', [RevisorController::class, 'becomeRevisor'])->name('become.revisor');
 Route::get('/make/revisor/{user}', [RevisorController::class, 'makeRevisor'])->name('make.revisor');
 Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
-Route::get('/become/revisor', [RevisorController::class, 'revisorRequest'])->name('revisor.request');
+
 
 
 

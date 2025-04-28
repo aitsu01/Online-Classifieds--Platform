@@ -22,7 +22,7 @@
 - **CRUD** con **Livewire**
     -pulsante "**crea articolo**" nella home e nella navbar
 - visualizzazione messaggi di conferma per UX
- 
+
 - homepage con **articoli più recenti**
 - pagina dettaglio articoli con **carosello** immagini.
 - esplorazione articoli per categoria:
@@ -30,17 +30,21 @@
     - dalle card e dalla pagina dettaglio con collegamento sul nome della categoria
 
 - possibilità per un utente di diventare moderatore
+    - form di richiesta
     - invio mail di richiesta automatico
     - utente reso revisor tramite comando d'automazione
 - moderazione annunci pubblicati: un utente revisore può accettare o rifiutare gli annunci
     - dashboard moderatori
     - indice con solo gli annunci accettati
-    -
+    - pulsante "annulla ultima revisione"
 
 - ricerca full text tramite search-bar
     - per titolo
     - per categoria
     - per descrizione
+    
+
+
 
     
 

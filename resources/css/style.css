@@ -15,10 +15,15 @@ body {
 
 a {
     text-decoration: none;
+    color: var(--color-secondary);
 }
 
 a:hover {
     text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
 }
 
 .font1 {
@@ -35,162 +40,7 @@ a:hover {
   font-style: normal;
 }
 
-/* STILE NAVBAR */
 
-.bg-navbar {
-    background-color: var(--color-secondary);
-}
-
-/* HOMEPAGE BUTTON/BRAND LOGO */
-.navbar-brand::after, .activeNavBrand::after {
-    content: 'PRESTO';
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: var(--color-accent);
-    font-family: "Cinzel", serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 1.6vw;
-    font-weight: 700;
-    width: 8vw;
-    height: 75%;
-    margin: 0px;
-    padding: 0.3vw;
-    border: 1px solid var(--color-accent);
-    border-radius: 0.3vw;
-    transition: all 0.3s ease;
-}
-
-.activeNavBrand::after{
-    background-color: var(--color-accent);
-    color: var(--color-secondary);
-}
-
-
-.navbar-brand:hover::after{
-    content: '\F425';
-    font-family: 'bootstrap-icons';
-    font-size: 1.6vw;
-    background-color: var(--color-accent);
-    color: var(--color-secondary);
-}
-
-/* LINKS  */
-
-.navLink, .activeNavLink {
-    font-size: 1.4vw;
-    padding: 0.5vw 1vw;
-    display: inline-block;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-    height: 75%;
-  }
-  
-.navLink {
-    color: var(--color-primary);
-  }
-  
-.navLink:hover {
-    color: var(--color-accent);
-  }
-  
-.activeNavLink {
-   
-    color: var(--color-primary);
-    border-bottom: 1px solid var(--color-accent);
-
-  }
-  
-.activeNavLink:hover {
-    color: var(--color-primary);
-  }
-
-/* INPUT GROUP SELEZIONA PER CATEGORIA E RICERCA */
-.searchBox{
-    background-color: var(--color-secondary);
-    border: solid 0.15vw var(--color-accent);
-    border-radius: 0.3vw;
-    overflow: visible;
-    position: relative;
-    height: 7vh;
-}
-
-.searchControl{
-    background-color: transparent;
-    border: 0px;
-    border-radius: 0.3vw;
-    height: 100%;
-    padding: 1.2vw;
-    font-size: 1.4vw;
-    width: 20vw;
-}
-
-.searchControl:focus, .navBtn:focus{
-    outline: none;
-    box-shadow: 0 0 0 0;
-    background-color: transparent;
-    border: 0px;
-}
-
-.searchControl:focus::placeholder{
-    color: transparent;
-}
-
-.searchControl::placeholder{
-    color: var(--color-primary);
-    font-style: italic;
-    font-size: 1.4vw;
-}
-
-
-
-.navBtn{
-    background-color: var(--color-accent);
-    color: var(--color-secondary);
-    border-radius: 0.2vw 0 0vw 0.2vw;
-    border-right: 1px solid var(--color-accent);
-    display: flex;
-    align-items: center;
-    font-size: 1.4vw;
-    padding: 0.4vw;
-}
-
-.navBtn:hover{
-    background-color: var(--color-secondary);
-    color: var(--color-primary);
-    
-}
-
-form>.navBtn{
-    border-radius: 0 0.2vw 0.2vw 0;
-    border-right: 0px;
-    
-    border-radius: 0 0.2vw 0.2vw 0;
-}
-
-form>.navBtn:hover{
-    background-color: var(--color-secondary);
-    color: var(--color-accent);
-    border-left: 1px solid var(--color-accent);
-}
-
-/* STILE DEI DROPDOWN */
- nav .dropdown-menu{
-    background-color: var(--color-secondary);
-    border:0;
-    border-radius: 0.3vw;
-} 
-
-nav .dropdown-item{
-    color: var(--color-primary);
-    font-size: 1.4vw;
-}
-
-nav .dropdown-item:hover{
-    background-color: var(--color-accent);
-    color: var(--color-secondary);
-}
 
 /* STILE PAGINA HOME */
 
@@ -211,41 +61,63 @@ nav .dropdown-item:hover{
 }
 
 /* STILE FOOTER */
+
+.bgFooter{
+  background-color: var(--color-secondary);
+}
+
 .footerLink{
     color: var(--color-primary);
     text-decoration: none;
-    padding: 0.5vw;
 }
 
+.footerLinkDesktop{
+  padding-right: 3vw;
+}
 .footerLink:hover{
-    color: var(--color-accent);
+  color: var(--color-accent);
 }
 
 .footerItem{
-    color: var(--color-primary);
-    text-decoration: none;
-    list-style: none;
-    font-size: 1vw;
-    font-weight: 300;
-    width: fit-content;
-    height: fit-content;
+  color: var(--color-primary);
+  text-decoration: none;
+  list-style: none;
+  font-size: 1.5vw;
+  font-weight: 300;
+  width: fit-content;
+  height: fit-content;
 }
+.footerTitle{
+  color: var(--color-accent);
+  font-size: 2vw;
+  padding-bottom: 0.2vw;
+  margin: 0;
+  padding-bottom: 1vw;
+}
+
+
+
 li.footerItem > a.footerItem {
-    padding-top: 0.4vw;
-    text-decoration: underline;
-    text-underline-offset: 0.4vw;
+  padding-top: 0.4vw;
+  text-decoration: underline;
+  text-underline-offset: 0.4vw;
 }
 
 li.footerItem > a.footerItem:hover{
-    color: var(--color-accent);
+  color: var(--color-accent);
 }
 
-.footerTitle{
-    color: var(--color-accent);
-    font-size: 1.6vw;
-    padding-bottom: 0.2vw;
-    margin: 0;
+.btn:focus, .btn:active{
+  border: 0px;
+  box-shadow: none;
+  outline: none;
 }
+
+
+
+
+
+
 
 /* STILE PAGINA DETTAGLIO */
 .carosello {
@@ -263,7 +135,7 @@ li.footerItem > a.footerItem:hover{
   background-position: top left;
   transition: 1s;
 
-  height: 56vh; /* Assicura che abbiano tutte la stessa altezza */
+  height: 59vh; /* Assicura che abbiano tutte la stessa altezza */
   text-overflow: clip;
  
 }
@@ -424,9 +296,8 @@ li.footerItem > a.footerItem:hover{
 }
 .pagination > .page-item > .page-link{
   color: var(--color-secondary);
-  border: 2px solid var(--color-secondary);
-  border-radius: 100%;
-  font-size: 2vw;
+  border: 0px;
+  font-size: 1.6vw;
   font-family: "Cinzel", serif;
   font-weight: 600;
   margin: 0.5vw;
@@ -488,51 +359,11 @@ li.footerItem > a.footerItem:hover{
 
 
 
+
+
 /* SCHERMO MEDIO */
-@media screen and (max-width: 992px) {    
- .nav-link, .activeNavLink{
-        font-size: 2.5vw;
-        padding: 1vw;
-        display: block;
-    }
-
-    .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item, .navBtn{
-        font-size: 2.3vw;
-        width: 15vw;
-    }
-
-    .navBtn {
-      width: fit-content;
-      height: 100%;
-
-      margin: 0;
-    }
-
-    .searchBox{
-      display: flex;
-      justify-content: between;
-      align-items: center;
-      height: fit-content;
-    }
-    
-    .searchControl{
-      height: 100%;
-    }
-
-    .nav-item.dropdown .dropdown-menu {
-        position: absolute;
-        top: 100%; /* Posiziona sotto il bottone del dropdown */
-        left: 0;
-        right: 0;
-        z-index: 1050; /* Assicurati che il dropdown stia sopra la navbar */
-        box-shadow: 0 8px 16px rgba(0,0,0,0.15); /* Aggiungi un'ombra per maggiore visibilità */
-    }
-
-    .searchControl::placeholder{
-        font-size: 1.8vw;
-        padding: 0;
-    }
-
+ @media screen and (max-width: 992px) {    
+ 
     
 
     .pagination > .page-item > .page-link{
@@ -556,26 +387,27 @@ li.footerItem > a.footerItem:hover{
     border: 0;
     margin: 0;
     background-color: transparent;
+  } 
     
-  }
+    .footerLinkDesktop{
+      padding-right: 0px;
+    }
 
-}
+  
+
+} 
 
 /* SCHERMO PICCOLO */
-@media screen and (max-width: 540px){
-  .nav-link, .activeNavLink, .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item, .navBtn {
+ @media screen and (max-width: 540px){
+ 
+  .footerItem{
+  
     font-size: 2.5vw;
-  }
-
-  .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after, nav .dropdown-item{
-    width: 22vw;
-  }
-
- .searchBox{
-  height: 5vh;
- }
-
-  .searchControl{
-    width: 40vw;
-  }
+    
 }
+
+.footerTitle{
+  font-size: 4vw;
+  width: fit-content;
+  }
+ }

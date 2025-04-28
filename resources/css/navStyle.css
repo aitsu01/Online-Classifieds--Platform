@@ -1,0 +1,278 @@
+
+/* IMPOSTAZIONI GENERALI NAVBAR */
+.bgNavbar {
+    background-color: var(--color-secondary);
+    height: 12vh;
+}
+
+/* LOGO */
+.navbar-brand::after, .activeNavBrand::after {
+    content: 'PRESTO';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-accent);
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 1.8vw;
+    font-weight: 700;
+    width: 9vw;
+    height: 6.5vh;
+    margin: 0px;
+    border: 1px solid var(--color-accent);
+    border-radius: 0.3vw;
+    transition: all 0.3s ease;
+}
+
+.activeNavBrand::after{
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
+}
+
+.navbar-brand:hover::after{
+    content: '\F425';
+    font-family: 'bootstrap-icons';
+    font-size: 1.8vw;
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
+}
+
+
+/* LINK (SOLO DESKTOP) */
+.nav-link {
+  font-size: 1.5vw;
+
+  box-sizing: border-box;
+  transition: 0.3s ease;
+  color: var(--color-primary);
+
+}
+
+.nav-link:hover{
+    color: var(--color-accent);
+}
+.nav-link:focus{
+    color: var(--color-accent);
+}
+
+.searchBox > .nav-link:focus{
+    color: var(--color-secondary);
+}
+.active{
+    border-bottom: 1px solid var(--color-accent);
+}
+
+/* BOX DI RICERCA E DROPDOWN CATEGORIE */
+
+.searchBox {
+border: 1px solid var(--color-accent);
+border-radius: 0.3vw;
+height: 6.5vh;
+width: fit-content;
+}
+
+.categoryBtn {
+  background-color: var(--color-accent);
+  height: 100%;
+  width: 9vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-secondary);
+  border-radius: 0.3vw;
+}
+
+.categoryBtn:hover {
+  background-color: var(--color-secondary);
+  /* color: var(--color-accent); */
+  border-right: 1px solid var(--color-accent);
+}
+
+/* DROPDOWN */
+nav .dropdown-menu {
+    background-color: var(--color-secondary);
+    border: none;
+    border-radius: 0.3vw;
+  }
+  
+  nav .dropdown-item {
+    color: var(--color-primary);
+    font-size: 1.4vw;
+    transition: 0.2s ease;
+  }
+  
+  nav .dropdown-item:hover {
+    background-color: var(--color-accent);
+    color: var(--color-secondary);
+  }
+
+.searchControl{
+    background-color: transparent;
+    border: 0px;
+    transition: 0.3s ease;
+    height: 100%;
+    width: 20vw;
+    font-size: 1.4vw;
+
+}
+
+.searchControl::placeholder{
+    color: var(--color-primary);
+    font-style: italic;
+    font-weight: 200;
+    font-size: 1.4vw;
+}
+
+.searchControl::placeholder:hover{
+    color: var(--color-accent);
+}
+
+.searchControl:focus{
+    border: 0px;
+    box-shadow: 0 0 0 0;
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.btnSearch{
+    padding: 0px;
+    border: 0px;
+    box-shadow: 0 0 0 0;
+    background-color: transparent;
+    color: var(--color-primary);
+}
+
+.btnSearch:hover{
+    color: var(--color-accent);
+}
+
+.dropdown-divider{
+    border-color: var(--color-accent);
+}
+
+
+/* Hamburger e search button mobile */
+ .search-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.menu{
+    display:flex;
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after  {
+
+        font-size: 3vw;
+        width: 15vw;
+        height: 6vh;
+
+    }
+
+    .navbar-brand:hover::after{
+        font-size: 3vw;
+    }
+
+    .nav-link{
+        font-size: 2vw;
+    }
+
+    .searchBox{
+        border: 0px;
+        width: 100%;
+    }
+
+    .menu{
+        position: absolute;
+        top: 120%;
+        
+        padding: 0.5vw;
+        display: none;
+        z-index: 999;
+    }
+
+    .menu.show {
+        display: block;
+        width: 47vw;
+        right: 0px;
+        background-color: var(--color-secondary);
+        border-radius: 0.9vw;
+        
+    
+    }
+
+    .menu > .nav-item{
+        font-size: 1vw;
+    }
+
+    .menu-toggle{
+        display: block;
+    }
+
+    .categoryBtn{
+        width: 15vw;
+        padding: 3vw;
+    }
+
+    .categoryBtn:hover {
+        background-color: var(--color-accent);
+        /* color: var(--color-accent); */
+        border-right: 0px;
+    }
+
+    .dropdown-item{
+        font-size: 2vw;
+    }
+
+
+
+
+
+}
+
+@media screen and (max-width: 567px) {
+
+    .categoryBtn, .navbar-brand::after, .activeNavBrand::after, .navbar-brand:hover::after
+    {
+        padding: 1vw;
+        height: 5vh;
+        width: 15vw;
+    }
+
+    .categoryBtn{
+        width: 20vw;
+    }
+    
+
+    .nav-link{
+    font-size: 4.2vw;
+    }
+
+    .navbar-brand::after, .activeNavBrand::after {
+        height: 5vh;
+    }
+    
+
+}
+
+    
+
+    
+

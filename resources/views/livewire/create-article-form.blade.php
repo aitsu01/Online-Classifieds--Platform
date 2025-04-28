@@ -1,4 +1,5 @@
 <div>
+
     
     <div class="row justify-content-around">
         
@@ -86,7 +87,7 @@
         
         <div class="col-12 col-md-3">
             
-            <p class="form-label fs-4 fw-bold font1 me-3 text-center">Anteprima</p>
+            <p class="form-label fs-4 fw-bold font1 me-3 text-center mt-2">Anteprima</p>
             <div class="card card-custom pe-3">
                 
                 <div class="card-body d-flex flex-column align-items-start justify-content-between overflow-hidden">

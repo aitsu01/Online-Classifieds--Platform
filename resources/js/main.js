@@ -33,3 +33,29 @@ document.addEventListener('DOMContentLoaded', function () {
   
 
 });
+
+
+const searchToggleBtn = document.getElementById('searchToggleBtn');
+const searchForm = document.querySelector('.searchForm');
+const searchBar = document.getElementById('searchBar');
+
+searchToggleBtn.addEventListener('click', () => {
+    if (searchBar.classList.contains('d-none')) {
+        // Se la barra è nascosta, la mostro
+        searchBar.classList.remove('d-none');
+        searchBar.focus(); // Bonus: mette subito il cursore dentro!
+    } else {
+        // Se la barra è visibile, invio il form
+        searchForm.submit();
+    }
+});
+
+
+
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
+
+  menuToggle.addEventListener('click', () => {
+    menu.classList.toggle('show');
+    
+  });

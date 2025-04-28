@@ -16,7 +16,12 @@
         "laravel/tinker": "^2.10.1",
         "livewire/livewire": "^3.6",
         "outhebox/blade-flags": "^1.5",
+<<<<<<< HEAD
         "teamtnt/laravel-scout-tntsearch-driver": "^15.0"
+=======
+        "teamtnt/laravel-scout-tntsearch-driver": "^15.0",
+        "twbs/bootstrap-icons": "^1.11"
+>>>>>>> 0f724a460c210ab44b17e06a67e5d895fa1a1fe3
     },
     "require-dev": {
         "fakerphp/faker": "^1.23",

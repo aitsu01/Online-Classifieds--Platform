@@ -1,95 +1,50 @@
-<footer class="bg-navbar container-fluid py-3 mt-5">
-
+<footer class="bgFooter container-fluid py-3 mt-5">
   <div class="row justify-content-evenly">
-    
-    <div class="col-4">
-      
-      <div class="row">
-        
-        <div class="col-12 text-center p-0">
-            <h3 class="footerTitle">Contattaci</h3>
-        </div>
 
-      </div>
-
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center p-0">
-          <ul class="m-0 p-0 d-flex flex-column align-items-center">
-            <li class="footerItem"><strong>Indirizzo:</strong> Via dei Matti, 0</li>
-            <li class="footerItem"><strong>E-Mail:</strong> presto@tardi.com</li>
-            <li class="footerItem"><strong>Telefono:</strong> 333 333333</li>
-          </ul>
-        </div>
-
-      </div>
+    <!-- Colonna CONTATTACI -->
+    <div class="col-4 d-flex flex-column align-items-center">
+      <h3 class="footerTitle text-center">Contattaci</h3>
+      <ul class="d-flex flex-column align-items-center p-0 m-0">
+        <li class="footerItem"><strong>Indirizzo:</strong> Via dei Matti, 0</li>
+        <li class="footerItem"><strong>E-Mail:</strong> presto@tardi.com</li>
+        <li class="footerItem"><strong>Telefono:</strong> 333 333333</li>
+      </ul>
     </div>
 
     @auth
     @if (Auth::user()->is_revisor == false)
-
-     <div class="col-4">
-      
-      <div class="row">
-        
-        <div class="col-12 text-center p-0">
-            <h3 class="footerTitle">Lavora con noi</h3>
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div class="col-12 d-flex justify-content-center p-0">
-          <ul class="m-0 p-0 d-flex flex-column align-items-center">
-            <li class="footerItem"><a href="{{route('revisor.request')}}" class="footerItem">Diventa moderatore</a></li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
     
+    <!-- Colonna LAVORA CON NOI -->
+    <div class="col-4 d-flex flex-column align-items-center">
+      <h3 class="footerTitle text-center">Lavora con noi</h3>
+      <ul class="d-flex flex-column align-items-center p-0 m-0">
+        <li class="footerItem">
+          <a href="{{route('become.revisor.form')}}" class="footerItem">Diventa moderatore</a>
+        </li>
+      </ul>
+    </div>
+
     @endif
     @endauth
 
-    <div class="col-4">
-      
-      <div class="row">
-        
-        <div class="col-12 text-center p-0">
-          <h3 class="footerTitle">Seguici</h3>
-        </div>
-
-      </div>
-
-      <div class="row justify-content-center">
-        
-        <div class="col-12 p-0">
-          <ul class="m-0 p-0 d-flex justify-content-center align-items-center">
-
-            <li class="footerItem">
-              <a href="" class="footerLink"><i class="bi bi-instagram fs-md-3 fs-5 mx-2 "></i></a>
-            </li>
-          
-            <li class="footerItem">
-              <a href="" class="footerLink"><i class="bi bi-facebook fs-md-3 fs-5 mx-2 "></i></a>
-            </li>
-          
-            <li class="footerItem">
-              <a href="" class="footerLink"><i class="bi bi-twitter fs-md-3 fs-5 mx-2 "></i></a>
-            </li>
-          
-            <li class="footerItem">
-              <a href="" class="footerLink"><i class="bi bi-whatsapp fs-md-3 fs-5 mx-2 "></i></a>
-            </li>
-            
-          </ul>
-
-        </div>
-
-        
-      </div>
+    <!-- Colonna SEGUICI -->
+    <div class="col-4 d-flex flex-column align-items-center">
+      <h3 class="footerTitle text-center">Seguici</h3>
+      <ul class="d-flex justify-content-center align-items-center flex-wrap p-0 m-0">
+        <li class="footerItem mx-2 p-0">
+          <a href="" class="footerLink"><i class="bi bi-instagram fs-3 p-0"></i></a>
+        </li>
+        <li class="footerItem mx-2 p-0">
+          <a href="" class="footerLink"><i class="bi bi-facebook fs-3 p-0"></i></a>
+        </li>
+        <li class="footerItem mx-2 p-0">
+          <a href="" class="footerLink"><i class="bi bi-twitter fs-3 p-0"></i></a>
+        </li>
+        <li class="footerItem mx-2 p-0">
+          <a href="" class="footerLink"><i class="bi bi-whatsapp fs-3 p-0"></i></a>
+        </li>
+      </ul>
     </div>
 
   </div>
 </footer>
-
-</div>

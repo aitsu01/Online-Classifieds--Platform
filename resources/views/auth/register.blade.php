@@ -1,5 +1,10 @@
 <x-layout :title="'Registrati'">
-  
+  <div class="row mt-5">
+    <div class="col-1 mt-5">
+        <a href="{{route('homepage')}}"><i class="bi bi-arrow-left fs-2 fw-bold"></i></a>
+    </div>
+  </div>
+
   <div class="row mt-5">
     <div class="col-12 my-5">
       <h1 class="text-center titolo font1 mt-5">Registrati</h1>
@@ -48,7 +53,7 @@
         <div class="d-flex justify-content-between align-items-end my-4">
           <button type="submit" class="btn btn-custom fs-4 font1 fw-bold">Registrati</button>
           <div class="d-flex flex-column align-items-center justify-content-center">
-          <p class="font1 fw-bold fs-md-5 fs-6 m-0">Hai già un account?</p>
+          <p class="font1 text-center fw-bold fs-md-5 fs-6 m-0">Hai già un account?</p>
           <a href="{{route('login')}}" class="btn btn-custom fs-4 font1 fw-bold">Login</a>
           </div>
         </div>

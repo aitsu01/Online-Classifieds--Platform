@@ -28,19 +28,31 @@ class RevisorController extends Controller
         return redirect()->back()->with('message', "Hai rifiutato l'articolo $article->title");
     }
 
-    public function becomeRevisor(){
-        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user()));
-        
-        return redirect()->route('homepage')->with('success', "Hai richiesto di diventare revisore");
+    public function becomeRevisorForm(){
+        return view('revisor.form');
+    }
 
+    public function becomeRevisor(Request $request){
+        $validated = $request->validate([
+            'message' => 'required|max:255|min:10'
+        ], [
+            'message.required' => 'Devi inserire un messaggio',
+            'message.max' => 'Il messaggio non puo essere piu lungo di 255 caratteri',
+            'message.min' => 'Il messaggio deve avere almeno 10 caratteri'
+        ]);
+
+        $userMessage = $validated['message'];
+
+        Mail::to('admin@presto.it')->send(new BecomeRevisor(Auth::user(), $userMessage));
+
+        $user = Auth::user();
+        $user->is_revisor_request_sent = true;
+        $user->save();
+        return redirect()->route('homepage')->with('success', "La tua richiesta di diventare revisore è stata presa in carico!");
     }
 
     public function makeRevisor(User $user){
         Artisan::call('app:make-user-revisor', ['email' => $user->email]);
-        return redirect()->back();
-    }
-
-    public function revisorRequest(){
-        return view('revisor.form');
+        return redirect()->route('homepage')->with('success', "L'utente {$user->name} diventa ora revisore");
     }
 }

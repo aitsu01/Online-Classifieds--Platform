@@ -1,5 +1,10 @@
 
 <x-layout :title="'Crea un nuovo annuncio'">
+    <div class="row mt-5">
+        <div class="col-1 mt-5">
+            <a href="{{route('homepage')}}"><i class="bi bi-arrow-left fs-2 fw-bold"></i></a>
+        </div>
+      </div>
     
         <div class="row mt-5">
             <div class="col-12">
