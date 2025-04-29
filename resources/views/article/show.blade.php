@@ -32,24 +32,24 @@
                 <!-- Swiper -->
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                     <div class="swiper-wrapper">
-                      @foreach ($article->images as $key => $image)
-                      <div class="swiper-slide">
-                        <img src="{{Storage::url($image->path)}}" />
-                      </div>
-                      @endforeach
+                        @foreach ($article->images as $key => $image)
+                        <div class="swiper-slide">
+                            <img src="{{Storage::url($image->path)}}" />
+                        </div>
+                        @endforeach
                     </div>
                     <div class="swiper-button-next accento"></div>
                     <div class="swiper-button-prev accento"></div>
-                  </div>
-                  <div thumbsSlider="" class="swiper mySwiper">
+                </div>
+                <div thumbsSlider="" class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                      @foreach ($article->images as $key => $image)
-                      <div class="swiper-slide">
-                        <img src="{{Storage::url($image->path)}}" />
-                      </div>
-                      @endforeach
+                        @foreach ($article->images as $key => $image)
+                        <div class="swiper-slide">
+                            <img src="{{Storage::url($image->path)}}" />
+                        </div>
+                        @endforeach
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
     </div>  

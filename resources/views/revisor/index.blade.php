@@ -29,9 +29,9 @@
         <div class="col-md-6">
             <div class="row justify-content-center">
                 @if ($article_to_check->images)
-                @foreach ($article_to_check->images as $image)
+                @foreach ($article_to_check->images as $key => $image)
                 <div class="col-4 col-md-3 mb-4 mx-2 p-0">
-                    <img src="{{Storage::url($image->path)}}" class="img-fluid w-75 rounded shadow" alt="immagine inserita dall'utente">
+                    <img src="{{$image->getUrl(300,300)}}" class="img-fluid w-75 rounded shadow" alt="Immagine {{$key + 1}} dell'articolo {{$article_to_check->title}}">
                 </div>
                 @endforeach
                 @endif
