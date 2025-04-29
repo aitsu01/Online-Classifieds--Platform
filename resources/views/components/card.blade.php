@@ -3,7 +3,7 @@
         <div class="card-body d-flex flex-column align-items-start justify-content-evenly overflow-hidden">
             <h5 class="card-title accento fs-3 my-1 text-uppercase"> <span class="cardTxt text-truncate">{{$article->title}}</span></h5>
             <div class="w-100 d-flex justify-content-center align-items-center">
-            <img src="{{$article->images->isNotEmpty() ? Storage::url($article->images->first()->path) : '/media/placeholder.jpg'}}" alt="" class="img-custom mb-2">
+            <img src="{{$article->images->isNotEmpty() ? $article->images->first()->getUrl(300,300) : '/media/placeholder.jpg'}}" alt="" class="img-custom mb-2">
             </div>
             <h6 class="card-subtitle mt-1 accento fs-5">{{__('ui.seller')}}: <span class="cardTxt">{{$article->user()->get()->first()->name}}</span></h6>
             <p class="card-text accento text-end mt-2 fs-6 text-truncate"><span class="cardTxt">{{$article->description}}</span></p>
