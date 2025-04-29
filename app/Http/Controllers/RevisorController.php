@@ -35,10 +35,6 @@ class RevisorController extends Controller
     public function becomeRevisor(Request $request){
         $validated = $request->validate([
             'message' => 'required|max:255|min:10'
-        ], [
-            'message.required' => 'Devi inserire un messaggio',
-            'message.max' => 'Il messaggio non puo essere piu lungo di 255 caratteri',
-            'message.min' => 'Il messaggio deve avere almeno 10 caratteri'
         ]);
 
         $userMessage = $validated['message'];
