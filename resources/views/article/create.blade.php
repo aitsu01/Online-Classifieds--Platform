@@ -10,7 +10,7 @@
     
     <div class="row mt-5">
         <div class="col-12">
-            <h1 class="text-center titolo font1 my-5">Crea un nuovo annuncio</h1>
+            <h1 class="text-center titolo font1 my-5">{{__('ui.createAd')}}</h1>
         </div>
     </div>
     

@@ -16,15 +16,15 @@
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 d-flex flex-column align-items-start justify-content-evenly bordo w-md-100 h-md-100">
                 <div>
-                    <p class="fs-4 accento">Descrizione: <span class="cardTxt">{{$article->description}}</span></p>
+                    <p class="fs-4 accento">{{__('ui.description')}}: <span class="cardTxt">{{$article->description}}</span></p>
                 </div>
                 <div>
-                    <p class="fs-5 accento">Prezzo: <span class="cardTxt font1">{{$article->price}} €</span></p>
-                    <p class="fs-5 accento">Venditore: <span class="cardTxt">{{$article->user()->get()->first()->name}}</span></p>
-                    <a href="{{ route('byCategory', ['category' => $article->category]) }}"><p class="fs-5 accento">Categoria: <span class="cardLink">{{$article->category->name}}</span></p></a>
+                    <p class="fs-5 accento">{{__('ui.price')}}: <span class="cardTxt font1">{{$article->price}} €</span></p>
+                    <p class="fs-5 accento">{{__('ui.seller')}}: <span class="cardTxt">{{$article->user()->get()->first()->name}}</span></p>
+                    <a href="{{ route('byCategory', ['category' => $article->category]) }}"><p class="fs-5 accento">{{__('ui.category')}}: <span class="cardLink">{{$article->category->name}}</span></p></a>
                 </div>
                 <div>
-                    <p class="fs-5 accento">Pubblicato il: <span class="cardTxt font1">{{$article->created_at->format('d/m/Y')}}</span></p>
+                    <p class="fs-5 accento">{{__('ui.publishedOn')}}: <span class="cardTxt font1">{{$article->created_at->format('d/m/Y')}}</span></p>
                 </div>
             </div>
             

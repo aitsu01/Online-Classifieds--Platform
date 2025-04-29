@@ -6,7 +6,7 @@
       </div>
     <div class="row my-5">
         <div class="col-12 mt-5 mt-lg-0">
-            <h2 class="text-center mt-5 titolo font1 fw-bold">Tutti gli annunci</h2>
+            <h2 class="text-center mt-5 titolo font1 fw-bold">{{__('ui.allAds')}}</h2>
         </div>
     </div>
     
@@ -15,7 +15,7 @@
         <x-card :article="$article"/>
         @empty
         
-        <h3 class="text-center">Non sono ancora presenti annunci</h3>
+        <h3 class="text-center">{{__('ui.noResults')}}</h3>
         
         @endforelse
     </div>
