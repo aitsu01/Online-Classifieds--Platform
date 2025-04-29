@@ -28,12 +28,14 @@
     <div class="row justify-content-center pt-5">
         <div class="col-md-6">
             <div class="row justify-content-center">
-                @if ($article_to_check->images)
-                @foreach ($article_to_check->images as $key => $image)
-                <div class="col-4 col-md-3 mb-4 mx-2 p-0">
-                    <img src="{{$image->getUrl(300,300)}}" class="img-fluid w-75 rounded shadow" alt="Immagine {{$key + 1}} dell'articolo {{$article_to_check->title}}">
-                </div>
-                @endforeach
+                @if($article_to_check->images->isNotEmpty())
+                    @foreach ($article_to_check->images as $key => $image)
+                    <div class="col-4 col-md-3 mb-4 mx-2 p-0">
+                        <img src="{{$image->getUrl(300,300)}}" class="img-fluid w-75 rounded shadow" alt="Immagine {{$key + 1}} dell'articolo {{$article_to_check->title}}">
+                    </div>
+                    @endforeach
+                @else
+                    <img src="/media/placeholder.jpg" alt="" class="img-fluid w-50 rounded shadow">
                 @endif
             </div>
         </div>
@@ -42,7 +44,7 @@
                 <h2 class="fs-5"><span class="form-label fs-4">{{__('ui.title')}}</span> {{$article_to_check->title}}</h2>
                 <h3 class="fs-5"> <span class="form-label fs-4">{{__('ui.seller')}}:</span> {{$article_to_check->user->name}}</h3>
                 <h4 class="fs-5"> <span class="form-label fs-4">{{__('ui.price')}}:</span> €<span class="font1">{{$article_to_check->price}}</span></h4>
-                <h4 class="fs-5"><span class="form-label fs-4">{{__('ui.category')}}:</span> {{$article_to_check->category->name}}</h4>
+                <h4 class="fs-5"><span class="form-label fs-4">{{__('ui.category')}}:</span> {{__('ui.'.$article_to_check->category->name)}}</h4>
                 <p class="fs-5"><span class="form-label fs-4">{{__('ui.description')}}</span> {{$article_to_check->description}}</p>
             </div>
             

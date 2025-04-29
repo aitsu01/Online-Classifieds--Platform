@@ -7,7 +7,7 @@
                     <h1 class="modal-title fw-bold fs-6 text-center font1" id="exampleModalLabel">{{__('ui.congrats')}}</h1>                                                     
                 </div>
                 <div class="modal-body text-center">                            
-                    <p class="fs-5 font1 " id="successMessage">{{__('ui.adSuccessMessage')}}</p>
+                    <p class="fs-5 font1 d-none" id="successMessage">Prova</p>
                     <p class="fs-6 font1" id="">{{__('ui.waitForRevisor')}}</p>
                 </div>
             </div>
@@ -107,7 +107,7 @@
                             <option label disable class="fs-4 fw-bold font1">{{__('ui.selectCategory')}}*</option>
                             
                             @foreach ($this->categories as $category)
-                                <option class="fs-5" value="{{$category->id}}">{{$category->name}}</option>
+                                <option class="fs-5" value="{{$category->id}}">{{__('ui.'.$category->name)}}</option>
                             
                                 @if (!$loop->last)
                                     <hr class="dropdown-divider">
