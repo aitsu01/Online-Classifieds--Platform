@@ -267,6 +267,7 @@ li.footerItem > a.footerItem:hover{
   object-fit: cover;
 }
 
+
 /* stile modal */
 .bg-modal {
   background-color: var(--color-accent);
