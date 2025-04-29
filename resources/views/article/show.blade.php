@@ -39,8 +39,8 @@
                         </div>
                         @endforeach
                     </div>
-                    <div class="swiper-button-next accento"></div>
-                    <div class="swiper-button-prev accento"></div>
+                    <div class="swiper-button-next text-black titolo"></div>
+                    <div class="swiper-button-prev text-black titolo"></div>
                 </div>
                 <div thumbsSlider="" class="swiper mySwiper">
                     <div class="swiper-wrapper">
