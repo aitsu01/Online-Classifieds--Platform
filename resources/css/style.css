@@ -135,7 +135,7 @@ li.footerItem > a.footerItem:hover{
   background-position: top left;
   transition: 1s;
 
-  height: 59vh; /* Assicura che abbiano tutte la stessa altezza */
+  height: 75vh; /* Assicura che abbiano tutte la stessa altezza */
   text-overflow: clip;
  
 }
@@ -330,12 +330,28 @@ li.footerItem > a.footerItem:hover{
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  width: 5vh;
-  height: 5vh;
+  width: 18vh;
+  height: 18vh;
  }
 
  .img-custom {
   height: 15vh;
+ }
+
+ .previewBtn{
+  border: 0px;
+  height: fit-content;
+  width: 3vw;
+  font-size: 2.5vw;
+  font-weight: 900;
+  color: var(--color-accent);
+  box-shadow: 0 0 0 0;
+  background-color: transparent;
+  text-shadow: 1px 1px 1px var(--color-secondary);
+ 
+  position: absolute;
+  top: 0;
+  right: 0;
  }
 
 
