@@ -10,7 +10,9 @@
             <h6 class="card-subtitle accento mt-2 fs-5">{{__('ui.price')}}: <span class="cardTxt font1">{{$article->price}}€</span></h6>
             <a href="{{ route('byCategory', ['category' => $article->category]) }}"><h6 class="card-subtitle mt-2 accento fs-5">{{__('ui.category')}}: <span class="cardLink">{{__("ui." . $article->category->name)}}</span> </h6> </a>
             <h6 class="card-subtitle accento mt-2 fs-5">{{__('ui.publishedOn')}}: <span class="cardTxt font1">{{$article->created_at->format('d/m/Y')}}</span></h6>
-            <a class="btn-custom p-1 my-2 fw-bold fs-6" href="{{ route('article.show', compact('article')) }}">{{__('ui.adDetails')}}</a>   
+            <div class="w-100 d-flex justify-content-center align-items-center">
+            <a class="btn-custom p-2 my-2 fw-bold fs-6" href="{{ route('article.show', compact('article')) }}">{{__('ui.adDetails')}}</a>
+            </div>   
         </div>
     </div>
 </div>

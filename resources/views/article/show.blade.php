@@ -29,6 +29,7 @@
             </div>
             
             <div class="col-12 col-md-6 bordo">
+                @if ($article->images->isNotEmpty())
                 <!-- Swiper -->
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper mySwiper2">
                     <div class="swiper-wrapper">
@@ -49,7 +50,10 @@
                         </div>
                         @endforeach
                     </div>
-                </div>
+                </div>     
+                @else
+                   <img src="/media/placeholder.jpg" alt="" class="img-fluid w-100 rounded shadow"> 
+                @endif
             </div>
         </div>
     </div>  
