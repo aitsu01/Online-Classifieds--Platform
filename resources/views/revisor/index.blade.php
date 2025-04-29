@@ -8,7 +8,7 @@
     
     <div class="row mt-5">
         <div class="col-12 mt-5">
-            <h2 class="text-center my-5 titolo font1 fw-bold">{{__('ui.revisorDashboard')}}</h2>
+            <h2 class="text-center my-5 titolo font1 fs-1 fw-bold">{{__('ui.revisorDashboard')}}</h2>
         </div>
         <div class="col-12">
             <form action="{{route('undo')}}" method="POST">
