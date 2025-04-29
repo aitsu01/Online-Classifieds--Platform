@@ -46,7 +46,7 @@ return [
     'send'  => 'Invia',
     'congrats' => 'Congratulazioni!',
     'adSuccessMessage' => 'Annuncio creato con successo.',
-    'waitForRevisor' => 'Aspetta che un moderatore lo approvi.',
+    'waitForRevisor' => 'Aspetta che un moderatore ti approvi.',
     'img' => 'Immagini',
     'selectCategory' => 'Seleziona una categoria',
     'create' => 'Crea annuncio',

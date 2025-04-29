@@ -45,7 +45,7 @@ return [
     'send'  => 'Enviar',
     'congrats' => 'Felicidades!',
     'adSuccessMessage' => 'Anuncio creado con exito.',
-    'waitForRevisor' => 'Espera a que un moderador lo apruebe.',
+    'waitForRevisor' => 'Espera a que un moderador te apruebe.',
     'img' => 'Imagenes',
     'selectCategory' => 'Selecciona una categoria',
     'create' => 'Crear anuncio',
