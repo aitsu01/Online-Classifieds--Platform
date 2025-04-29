@@ -43,6 +43,7 @@ return [
     'revisorRequestSent' => 'La tua richiesta è gia stata inviata',
     'waitForAdmin' => "Aspetta che l'ADMIN la approvi",
     'formQuestion' => "Perché desideri diventare moderatore?",
+    'formQuestionPlaceholder' => "Desidero diventare moderatore per...",
     'send'  => 'Invia',
     'congrats' => 'Congratulazioni!',
     'adSuccessMessage' => 'Annuncio creato con successo.',

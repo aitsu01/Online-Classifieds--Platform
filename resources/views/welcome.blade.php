@@ -15,7 +15,7 @@
                     <h1 class="modal-title fw-bold fs-6 text-center font1" id="exampleModalLabel">{{__('ui.congrats')}}<h1>                                                      
                 </div>
                 <div class="modal-body text-center">                            
-                    <p class="fs-5 font1">{{__('ui.waitForAdmin')}}</p>
+                    <p class="fs-5 font1">{{session('success')}}</p>
                 </div>
             </div>
         </div>

@@ -40,7 +40,7 @@ class ArticleController extends Controller implements HasMiddleware
     public function undoLastAction(){
         $lastArticle = Article::orderBy('updated_at', 'desc')->first();
         $lastArticle->setAccepted(null);
-        return redirect()->back()->with('message', "Revisione dell'annuncio $lastArticle->title annullata");
+        return redirect()->back()->with('message', __('messages.undoLastReview'), ['title' => $lastArticle->title]);
     }
 
     

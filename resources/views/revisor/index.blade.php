@@ -16,14 +16,16 @@
                 <button class="btn btn-outline-danger py-2 px-5 fw-bold mb-4">{{__('ui.undoRevision')}}</button>
             </form>
         </div>
-        @if (session()->has('message'))
-        <div>
-            <div class="col-12 text-center shadow rounded alert alert-success">
+    </div>
+        
+    @if (session()->has('message'))
+        <div class="row justify-content-center align-items-center">
+            <div class="col-4 text-center shadow rounded alert alert-success fs-5 font1">
                 {{session('message')}}
             </div>
         </div>
-        @endif
-    </div>
+    @endif
+    
     @if ($article_to_check)
     <div class="row justify-content-center pt-5">
         <div class="col-md-6">

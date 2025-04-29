@@ -43,6 +43,7 @@ return [
     'revisorRequestSent' => "Your revisor request has already been sent",
     'waitForAdmin' => "Wait for an admin to accept it",
     'formQuestion' => "Tell us why you want to become a revisor",
+    'formQuestionPlaceholder' => "I want to become a revisor because...",
     'send'  => 'Send',
     'congrats' => 'Congratulations!',
     'adSuccessMessage' => 'Ad created with success.',
