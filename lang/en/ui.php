@@ -46,7 +46,7 @@ return [
     'send'  => 'Send',
     'congrats' => 'Congratulations!',
     'adSuccessMessage' => 'Ad created with success.',
-    'waitForRevisor' => 'Wait for a revisor to accept it.',
+    'waitForRevisor' => 'Wait for a revisor to accept you.',
     'img' => 'Images',
     'selectCategory' => 'Select a category',
     'create' => 'Create ad',
