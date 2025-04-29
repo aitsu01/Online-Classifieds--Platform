@@ -6,7 +6,7 @@
       </div>
 <div class="row mt-5 align-items-center">
         <div class="col-12 mt-5">
-            <h2 class="text-center mt-5 font1 fw-bold titolo">Risultati per la ricerca {{$query}}</h2>
+            <h2 class="text-center mt-5 font1 fw-bold titolo">{{__('ui.searchResults')}} {{$query}}</h2>
         </div>
     </div>
     
@@ -15,7 +15,7 @@
         <x-card :article="$article"/>
         @empty
         
-        <h3 class="text-center">Nessun annuncio corrispondente alla tua ricerca</h3>
+        <h3 class="text-center">{{__("ui.noResults")}}</h3>
         
         @endforelse
     </div>

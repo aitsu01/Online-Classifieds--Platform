@@ -4,11 +4,11 @@
         <div class="modal-dialog">                    
             <div class="modal-content bg-modal">                        
                 <div class="modal-header d-flex justify-content-center">                            
-                    <h1 class="modal-title fw-bold fs-6 text-center font1" id="exampleModalLabel">Congratulazioni!</h1>                                                     
+                    <h1 class="modal-title fw-bold fs-6 text-center font1" id="exampleModalLabel">{{__('ui.congrats')}}</h1>                                                     
                 </div>
                 <div class="modal-body text-center">                            
-                    <p class="fs-5 font1 " id="successMessage">Annuncio creato con successo!</p>
-                    <p class="fs-6 font1" id="">Attendi che un moderatore lo revisioni.</p>
+                    <p class="fs-5 font1 " id="successMessage">{{__('ui.adSuccessMessage')}}</p>
+                    <p class="fs-6 font1" id="">{{__('ui.waitForRevisor')}}</p>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
             <form wire:submit="save">
                 <div class="mb-3">
                     
-                    <label for="title" class="form-label fs-4 fw-bold font1">Titolo*</label>
+                    <label for="title" class="form-label fs-4 fw-bold font1">{{__('ui.title')}}*</label>
                     
                     <input type="text" class="form-control @error ('title') is-invalid @enderror" id="title" wire:model.live="title">
                     @error('title')
@@ -35,7 +35,7 @@
 
                 <div class="mb-3">
 
-                    <label for="img" class="form-label fs-4 fw-bold font1">Immagini</label>
+                    <label for="img" class="form-label fs-4 fw-bold font1">{{__('ui.img')}}</label>
 
                     <input type="file" id="img" wire:model="temporary_images" multiple class="form-control shadow @error('temporary_images.*') is-invalid @enderror" placeholder="Img/">
 
@@ -75,7 +75,7 @@
 
                     <div class="mb-3">
                         
-                        <label for="description" class="form-label fs-4 fw-bold font1">Descrizione*</label>
+                    <label for="description" class="form-label fs-4 fw-bold font1">{{__('ui.description')}}*</label>
                         
                         <input type="text" class="form-control @error ('description') is-invalid @enderror" id="description" wire:model.live="description">
                         
@@ -88,7 +88,7 @@
 
                     <div class="mb-3">
 
-                        <label for="price" class="form-label fs-4 fw-bold font1 me-3">Prezzo*</label>
+                        <label for="price" class="form-label fs-4 fw-bold font1 me-3">{{__('ui.price')}}*</label>
                         
                         <input type="number" step="any" class="form-control @error ('price') is-invalid @enderror font1" id="price" wire:model.live="price">
                         
@@ -104,7 +104,7 @@
 
                         <select class="form-control @error ('category') is-invalid @enderror font1" id="category" wire:model.live="category">
 
-                            <option label disable class="fs-4 fw-bold font1">Seleziona una categoria*</option>
+                            <option label disable class="fs-4 fw-bold font1">{{__('ui.selectCategory')}}*</option>
                             
                             @foreach ($this->categories as $category)
                                 <option class="fs-5" value="{{$category->id}}">{{$category->name}}</option>
@@ -125,16 +125,16 @@
                     
                     </div>
 
-                    <button type="submit" class="btn btn-custom1 mt-4">Crea annuncio</button>
+                    <button type="submit" class="btn btn-custom1 mt-4">{{__('ui.create')}}</button>
             </form>
  
-            <p class="fs-5 mt-2">I campi contrassegnati con * sono obbligatori.</p>
+            <p class="fs-5 mt-2">{{__('ui.requiredFields')}}</p>
         </div>
 
         <div class="col-md-5 col-8">
         <div class="row justify-content-center">
             <div class="col-12 text-center d-flex justify-content-center">
-                <p class="form-label fs-4 fw-bold font1 me-3 text-center mt-2 w-100">Anteprima dell'annuncio</p>
+                <p class="form-label fs-4 fw-bold font1 me-3 text-center mt-2 w-100">{{__('ui.preview')}}</p>
             </div>
             <div class="col-12">
                 <div class="card card-custom">
@@ -154,13 +154,13 @@
                             
                         @endif
 
-                        <h6 class="card-subtitle mb-2 accento"><strong>Venditore:</strong> <span class="cardTxt">{{auth()->user()->name}}</span></h6>
+                        <h6 class="card-subtitle mb-2 accento"><strong>{{__('ui.seller')}}:</strong> <span class="cardTxt">{{auth()->user()->name}}</span></h6>
                         
                         <p class="card-text accento text-end fs-6 text-truncate"><span class="cardTxt">{{$this->description ? : 'Descrizione'}}</span></p>
                         
-                        <h6 class="card-subtitle my-2 fs-5 accento font1"><strong>Prezzo:</strong><span class="cardTxt font1"> €{{$this->price}}</span></h6>
+                        <h6 class="card-subtitle my-2 fs-5 accento font1"><strong>{{__('ui.price')}}:</strong><span class="cardTxt font1"> €{{$this->price}}</span></h6>
                         
-                        <h6 class="card-subtitle mb-2 accento"><strong>Categoria:<span class="cardLink"> {{ optional ($this->categories->firstWhere('id', $this->category))->name }} </span></h6>
+                        <h6 class="card-subtitle mb-2 accento"><strong>{{__('ui.category')}}:<span class="cardLink"> {{ optional ($this->categories->firstWhere('id', $this->category))->name }} </span></h6>
                             
                     </div>
                 </div>

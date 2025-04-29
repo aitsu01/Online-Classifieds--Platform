@@ -7,7 +7,7 @@
       </div>
 <div class="row mt-5 align-items-center">
         <div class="col-12">
-            <h2 class="text-center mt-5 font1 fs-3 fw-bold titolo">Annunci della categoria {{$category->name}}</h2>
+            <h2 class="text-center mt-5 font1 fs-3 fw-bold titolo">{{__('ui.adsByCategory')}} {{__("ui.$category->name")}}</h2>
         </div>
     </div>
     
@@ -16,7 +16,7 @@
         <x-card :article="$article"/>
         @empty
         
-        <h3 class="text-center">Non sono ancora presenti annunci</h3>
+        <h3 class="text-center">{{__('ui.noResults')}}</h3>
         
         @endforelse
     </div>
