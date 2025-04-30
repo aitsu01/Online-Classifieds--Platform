@@ -24,3 +24,5 @@ google_credential.json
 /.zed
 
 /storage/*.index
+
+google_credential.json

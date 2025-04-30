@@ -37,5 +37,12 @@ class Image extends Model
         
     }
 
+    protected function casts(): array
+    {
+        return [
+            'labels' => 'array',
+        ];
+    }
+
 
 }
