@@ -22,6 +22,7 @@ google_credential.json
 /.nova
 /.vscode
 /.zed
+google_credential.json
 
 /storage/*.index
 
