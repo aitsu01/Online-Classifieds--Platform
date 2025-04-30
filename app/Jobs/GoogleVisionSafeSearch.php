@@ -5,6 +5,7 @@ namespace App\Jobs;
 use App\Models\Image;
 
 use Illuminate\Bus\Queueable;
+
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Google\Cloud\Vision\V1\Client\ImageAnnotatorClient;
 
