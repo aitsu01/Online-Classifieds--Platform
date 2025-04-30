@@ -26,7 +26,7 @@
                 @csrf
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label font1 fs-3 fw-bold">{{__('ui.formQuestion')}}</label>
-                    <textarea name="message" id="message" cols="30" rows="10" class="form-control @error ('message') is-invalid @enderror" placeholder="Raccontaci perchè desideri diventare moderatore.."></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" class="form-control @error ('message') is-invalid @enderror" placeholder="{{__('ui.formQuestionPlaceholder')}}"></textarea>
                     @error('message')
                     <div class="text-danger">
                       {{$message}}

@@ -20,12 +20,12 @@ class RevisorController extends Controller
 
     public function accept(Article $article){
         $article->setAccepted(true);
-        return redirect()->back()->with('message', "Hai accettato l'articolo $article->title");
+        return redirect()->back()->with('message', __("messages.acceptedAd", ['title' => $article->title]));
     }
 
     public function reject(Article $article){
         $article->setAccepted(false);
-        return redirect()->back()->with('message', "Hai rifiutato l'articolo $article->title");
+        return redirect()->back()->with('message', __("messages.rejectedAd", ['title' => $article->title]));
     }
 
     public function becomeRevisorForm(){
@@ -44,11 +44,11 @@ class RevisorController extends Controller
         $user = Auth::user();
         $user->is_revisor_request_sent = true;
         $user->save();
-        return redirect()->route('homepage')->with('success', "La tua richiesta di diventare revisore è stata presa in carico!");
+        return redirect()->route('homepage')->with('success', __("messages.revisorRequestSent"));
     }
 
     public function makeRevisor(User $user){
         Artisan::call('app:make-user-revisor', ['email' => $user->email]);
-        return redirect()->route('homepage')->with('success', "L'utente {$user->name} diventa ora revisore");
+        return redirect()->route('homepage')->with('success', __("messages.isNowRevisor", ['name' => $user->name]));
     }
 }

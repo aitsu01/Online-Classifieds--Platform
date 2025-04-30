@@ -42,6 +42,7 @@ return [
     'revisorRequestSent' => 'Request de moderador enviado',
     'waitForAdmin' => 'Espera a que el administrador te responda',
     'formQuestion' => "Cuentanos porque queres ser moderador",
+    'formQuestionPlaceholder' => "Quiero ser moderador porque...",
     'send'  => 'Enviar',
     'congrats' => 'Felicidades!',
     'adSuccessMessage' => 'Anuncio creado con exito.',
@@ -58,4 +59,5 @@ return [
     'alreadyAccount' => 'Ya tienes una cuenta?',
     'name' => 'Nombre',
     'repeat'=> 'Repetir',
+
 ];

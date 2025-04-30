@@ -70,7 +70,7 @@ searchToggleBtn.addEventListener('click', () => {
     const successMessageElement = document.getElementById('successMessage');
   
     if (modalElement && successMessageElement) {
-        successMessageElement.textContent = message || '';
+        successMessageElement.textContent = message || "Articolo creato con successo!";
   
         const myModal = new bootstrap.Modal(modalElement);
         myModal.show();

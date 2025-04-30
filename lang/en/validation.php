@@ -194,4 +194,15 @@ return [
 
     'attributes' => [],
 
+
+    //MY CUSTOM VALIDATION
+
+    'titleRequired' => 'The title field is required.',
+    'titleMin' => 'The title field must be at least :min characters.',
+    'descriptionRequired' => 'The description field is required.',
+    'descriptionMin' => 'The description field must be at least :min characters.',
+    'categoryRequired' => 'The category field is required.',
+    'priceRequired' => 'The price field is required.',
+    'priceMin' => 'The price field must be at least €:min.',
+
 ];

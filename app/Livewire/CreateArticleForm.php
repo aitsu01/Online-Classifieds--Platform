@@ -78,7 +78,7 @@ class CreateArticleForm extends Component
      
 
         
-        $this->dispatch('article-created', 'Articolo creato con successo');
+        $this->dispatch('article-created', __('messages.uploadedAd', ['title' => $this->title]));
         $this->cleanForm();
 
     }
@@ -86,13 +86,13 @@ class CreateArticleForm extends Component
 
     public function messages(){
         return [
-            'title.required' => 'Il titolo è obbligatorio',
-            'title.min' => 'Il titolo deve avere almeno 3 caratteri',
-            'description.required' => 'La descrizione è obbligatoria',
-            'description.min' => 'La descrizione deve avere almeno 8 caratteri',
-            'category.required' => 'La categoria è obbligatoria',
-            'price.required' => 'Il prezzo è obbligatorio',
-            'price.min' => 'Il prezzo deve essere almeno 1'
+            'title.required' => __('validation.titleRequired' , ['min' => 3]),
+            'title.min' => __('validation.titleMin'),
+            'description.required' => __('validation.descriptionRequired' , ['min' => 8]),
+            'description.min' => __('validation.descriptionMin'),
+            'category.required' => __('validation.categoryRequired'),
+            'price.required' => __('validation.priceRequired'),
+            'price.min' => __('validation.priceMin', ['min' => 1])
         ];
     }
 
