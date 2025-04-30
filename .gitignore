@@ -24,3 +24,5 @@ yarn-error.log
 google_credential.json
 
 /storage/*.index
+
+google_credential.json
