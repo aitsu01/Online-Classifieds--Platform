@@ -40,12 +40,12 @@ class AddWatermark implements ShouldQueue
         Image::load($fullPath)
             ->watermark(
                 base_path('resources/img/watermark.png'),
-                /* AlignPosition::Center, */
-                width: 50,
-                height: 50,
-                paddingX: 5,
+                AlignPosition::Center,
+                width: 500,
+                height: 250,
+                /* paddingX: 5,
                 paddingY: 5,
-                paddingUnit: Unit::Percent,
+                paddingUnit: Unit::Percent, */
             )
             ->save($fullPath);
     }
