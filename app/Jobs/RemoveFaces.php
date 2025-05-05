@@ -31,40 +31,54 @@ class RemoveFaces implements ShouldQueue
      * Execute the job.
      */
     public function handle(): void
-    {
-        $i = Image::find($this->article_image_id);
-        if (!$i) {
-            return;
+{
+    $i = Image::find($this->article_image_id);
+    if (!$i) {
+        return;
+    }
+
+    $srcPath = storage_path('app/public/' . $i->path);
+    $imageContent = file_get_contents($srcPath);
+
+
+    putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
+    $imageAnnotator = new ImageAnnotatorClient();
+    $response = $imageAnnotator->faceDetection($imageContent);
+    $faces = $response->getFaceAnnotations();
+
+
+    $image = SpatieImage::load($srcPath);
+
+    foreach ($faces as $face) {
+        $vertices = $face->getBoundingPoly()->getVertices();
+        $bounds = [];
+        foreach ($vertices as $vertex) {
+            $bounds[] = [$vertex->getX(), $vertex->getY()];
         }
-        $srcPath = storage_path('app/public/' . $i->path);
-        $image = file_get_contents($srcPath);
-        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
-        $imageAnnotator = new ImageAnnotatorClient();
-        $response = $imageAnnotator->faceDetection($image);
-        $faces = $response->getFaceAnnotations();
-        foreach ($faces as $face) {
-            $vertices = $face->getBoundingPoly()->getVertices();
-            $bounds = [];
-            foreach ($vertices as $vertex) {
-               $bounds[] = [$vertex->getX(), $vertex->getY()];
-            }
+
+        if (count($bounds) >= 3) {
             $w = $bounds[2][0] - $bounds[0][0];
             $h = $bounds[2][1] - $bounds[0][1];
-            $image = SpatieImage::load($srcPath);
-            $image->watermark(base_path('resources/img/smile.png'),
-            AlignPosition::TopLeft, 
-            paddingX: $bounds[0][0],
-            paddingY: $bounds[0][1],
-            width: $w,
-            height: $h,
-            fit: Fit::Stretch
+
+            $image->watermark(
+                base_path('resources/img/smile.png'),
+                AlignPosition::TopLeft,
+                paddingX: $bounds[0][0],
+                paddingY: $bounds[0][1],
+                width: $w,
+                height: $h,
+                fit: Fit::Stretch
             );
-            $image->save($srcPath);
         }
-             
-        $imageAnnotator->close();
-           
-        }
-        
     }
+
+
+    
+
+
+    $image->save($srcPath);
+
+    $imageAnnotator->close();
+    }
+}
 

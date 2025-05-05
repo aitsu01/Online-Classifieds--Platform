@@ -2,12 +2,14 @@
 
 namespace App\Livewire;
 
+
 use App\Models\Article;
 use Livewire\Component;
 use App\Models\Category;
 use App\Jobs\RemoveFaces;
 use App\Jobs\ResizeImage;
 use Spatie\Image\Enums\Unit;
+use App\Jobs\AddWatermark;
 use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use App\Jobs\GoogleVisionLabelImage;
@@ -76,13 +78,20 @@ class CreateArticleForm extends Component
             foreach ($this->images as $image) {
                 $newFileName = "articles/{$this->article->id}";
                 $newImage = $this->article->images()->create(['path'=> $image->store($newFileName, 'public')]);
+                AddWatermark::dispatch($newImage->path);
                 RemoveFaces::withChain([
                     new ResizeImage($newImage->path, 300, 300),
+                    new AddWatermark("{$newFileName}/crop_300x300_" . basename($newImage->path)),
                     new GoogleVisionSafeSearch($newImage->id),
                     new GoogleVisionLabelImage($newImage->id)
                 ])->dispatch($newImage->id);
 
+                /* AddWatermark::dispatch($newImage->path); */
+                
+
             }
+
+            
             File::deleteDirectory(storage_path('app/livewire-tmp'));
             
         }

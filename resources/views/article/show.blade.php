@@ -46,7 +46,7 @@
                     <div class="swiper-wrapper">
                         @foreach ($article->images as $key => $image)
                         <div class="swiper-slide">
-                            <img src="{{Storage::url($image->path)}}" />
+                            <img src="{{Storage::url($image->path)}}?t={{ \Illuminate\Support\Facades\File::lastModified(storage_path('app/public/' . $image->path)) }}" alt="" />
                         </div>
                         @endforeach
                     </div>
