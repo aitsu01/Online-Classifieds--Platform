@@ -3,6 +3,7 @@
     --color-primary: rgb(254, 247, 255);
     --color-secondary: rgb(30, 2, 26);
     --color-accent: rgb(222, 253, 45);
+    --color-secondary1: rgba(30, 2, 26, 0.25);
 }
 
 .accento {
@@ -356,6 +357,16 @@ li.footerItem > a.footerItem:hover{
   position: absolute;
   top: 0;
   right: 0;
+ }
+
+ /* stile index revisor */
+
+ .bord {
+  border: 5px solid var(--color-secondary);
+  box-shadow: 5px 5px 15px var(--color-accent);
+  border-radius: 0.3vw;
+  background: linear-gradient(90deg,var(--color-secondary1), transparent) ;
+  
  }
 
 
