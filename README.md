@@ -1,7 +1,8 @@
 🛍️ Online Classifieds Platform
 A web application for posting and browsing classified ads with intelligent image processing, user authentication, and a multilingual interface.
 
-⚙️ Tech Stack
+⚙️ Tech Stack:
+
 Laravel – Backend framework
 
 Fortify – User authentication
@@ -13,7 +14,7 @@ MySQL – Database
 Google Cloud Vision API – Image content analysis (face detection, text recognition)
 
 🔧 Installation & Setup
-✅ Requirements
+✅ Requirements:
 PHP >= 8.1
 
 Composer
@@ -25,6 +26,8 @@ MySQL
 Laravel CLI
 
 Google Cloud Platform account with Vision API enabled
+
+
 
 1. Clone the Repository
 
@@ -89,7 +92,9 @@ Run background job workers
 #php artisan queue:work
 
 
-Additional Features
+Additional Features:
+
+
 -Multi-language UI (via Laravel localization)
 
 -Full-text search for ads
@@ -101,26 +106,14 @@ Additional Features
 -AI-based ad moderation via text content
 
 
+![Screenshot 2025-05-16 120036](https://github.com/user-attachments/assets/d4170a47-1ac0-45d8-ae64-e9dc06f42e9f)
+
+
+![Screenshot 2025-05-16 120213](https://github.com/user-attachments/assets/10a33e35-a9a4-4633-824d-04783dde380b)
+
+![Screenshot 2025-05-16 112926](https://github.com/user-attachments/assets/d4ac969f-dfb8-4b5b-8fae-d36ddcc7e124)
+
+![Screenshot 2025-05-16 113021](https://github.com/user-attachments/assets/f54613fb-00e9-4bd8-be56-a6e2c9808d3f)
 
 
 
-![Screenshot 2025-05-16 112926](https://github.com/user-attachments/assets/2dbb0e7a-ad06-4eb8-8aaf-bd8dbe4d5009)
-
-
-
-![Screenshot 2025-05-16 113021](https://github.com/user-attachments/assets/09d03977-909e-4c2f-9431-bf5bcb1a54e6)
-
-
-
-    
-
-![Screenshot 2025-05-16 120036](https://github.com/user-attachments/assets/dd9bd61b-776a-4c46-b8b9-3e5a2fcb3708)
-
-
-
-
-![Screenshot 2025-05-16 120036](https://github.com/user-attachments/assets/e3b1710b-7f86-4d32-92c4-d7fdd527c9e8)
-
-
-
-![Screenshot 2025-05-16 120213](https://github.com/user-attachments/assets/9e47a1fa-c719-4a14-98a6-19390c131cac)
