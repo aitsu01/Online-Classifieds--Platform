@@ -1,50 +1,126 @@
-# Progetto finale PRESTO
-## Studenti: Danilo Amoruso, Gianfranco Cito, Fabrizio Pavone, Anna Vincenzi.
+🛍️ Online Classifieds Platform
+A web application for posting and browsing classified ads with intelligent image processing, user authentication, and a multilingual interface.
 
-## FRONT-END
-**Palette colori utilizzata:**
-- rgb(235, 242, 250) *background*
-- rgb(30, 16, 20) *text*
-- rgb(253, 225, 45) *accent*
+⚙️ Tech Stack
+Laravel – Backend framework
 
-**Font utilizzato:**
-- Open Sans (dalla libreria *Google Fonts*)
+Fortify – User authentication
 
-## Funzionalità implementate
-- **Navbar** e **Footer** con Blade Components
+Livewire – Reactive UI components
 
-- **Autenticazione** con Laravel Fortify
+MySQL – Database
 
-- Relazioni **one to many**:
-    - User - Articles
-    - Category - Articles
+Google Cloud Vision API – Image content analysis (face detection, text recognition)
 
-- **CRUD** con **Livewire**
-    -pulsante "**crea articolo**" nella home e nella navbar
-- visualizzazione messaggi di conferma per UX
+🔧 Installation & Setup
+✅ Requirements
+PHP >= 8.1
 
-- homepage con **articoli più recenti**
-- pagina dettaglio articoli con **carosello** immagini.
-- esplorazione articoli per categoria:
-    - dalla navbar con dropdown
-    - dalle card e dalla pagina dettaglio con collegamento sul nome della categoria
+Composer
 
-- possibilità per un utente di diventare moderatore
-    - form di richiesta
-    - invio mail di richiesta automatico
-    - utente reso revisor tramite comando d'automazione
-- moderazione annunci pubblicati: un utente revisore può accettare o rifiutare gli annunci
-    - dashboard moderatori
-    - indice con solo gli annunci accettati
-    - pulsante "annulla ultima revisione"
+Node.js + NPM
 
-- ricerca full text tramite search-bar
-    - per titolo
-    - per categoria
-    - per descrizione
+MySQL
+
+Laravel CLI
+
+Google Cloud Platform account with Vision API enabled
+
+1. Clone the Repository
+
+git clone https://github.com/aitsu01/Online-Classifieds--Platform.git
+cd /Online-Classifieds--Platform
+
+2. Install Laravel Backend Dependencies
+
+composer install
+cp .env.example .env
+php artisan key:generate
+
+Edit .env to configure:
+
+APP_NAME="YourProject"
+APP_URL=http://localhost:8000
+
+DB_DATABASE=your_database
+DB_USERNAME=your_username
+DB_PASSWORD=your_password
+
+3. Run Database Migrations
+
+   php artisan migrate
+
+
+4. Frontend Assets
+npm install
+npm run dev
+
+
+ 5. Fortify Setup (Auth)
+Already included if you're using this repo.
+
+If not yet installed:
+composer require laravel/fortify
+php artisan vendor:publish --provider="Laravel\\Fortify\\FortifyServiceProvider"
+
+6. Livewire Integration
+Already installed in this project.
+
+
+7. Google Cloud Vision API Setup
+   Google_credential.json  ---->be sure to have this file in your folder's project and with your real credentials,dont upload on github or other workspake use gitgnore
+
+   composer require google/cloud-vision -w
+
+
+
+Common Artisan Commands:
+
+
+Start the development server:
+# php artisan serve
+
+
+
+Compile frontend assets (Livewire, Tailwind, etc.):
+# npm run dev
+
+Run background job workers 
+#php artisan queue:work
+
+
+Additional Features
+-Multi-language UI (via Laravel localization)
+
+-Full-text search for ads
+
+-Custom watermarking of uploaded images
+
+-Automatic image cropping (JavaScript/CSS-based)
+
+-AI-based ad moderation via text content
+
+
+
+
+
+![Screenshot 2025-05-16 112926](https://github.com/user-attachments/assets/2dbb0e7a-ad06-4eb8-8aaf-bd8dbe4d5009)
+
+
+
+![Screenshot 2025-05-16 113021](https://github.com/user-attachments/assets/09d03977-909e-4c2f-9431-bf5bcb1a54e6)
+
+
+
     
 
+![Screenshot 2025-05-16 120036](https://github.com/user-attachments/assets/dd9bd61b-776a-4c46-b8b9-3e5a2fcb3708)
 
 
-    
 
+
+![Screenshot 2025-05-16 120036](https://github.com/user-attachments/assets/e3b1710b-7f86-4d32-92c4-d7fdd527c9e8)
+
+
+
+![Screenshot 2025-05-16 120213](https://github.com/user-attachments/assets/9e47a1fa-c719-4a14-98a6-19390c131cac)
